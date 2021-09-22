@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../../styles/pages/Example.module.scss'
 
-const Home: NextPage = () => {
+const Example: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -69,4 +69,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default Example

@@ -1,0 +1,86 @@
+@import 'colors';
+
+.heroSection{
+  height: 100vh;
+  background-color: $darkBlue900;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.nameTitle{
+  color: $white;
+  font-size: 3.5rem;
+  position: relative;
+}
+
+.nameTitle h1{
+  margin: 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: min-content;
+  white-space: nowrap;
+}
+
+.nameTitle h1:nth-child(1){
+  color: $darkBlue900;
+  text-shadow: -2px -2px 0 $darkBlue200,  
+    2px -2px 0 $darkBlue200,
+    -2px 2px 0 $darkBlue200,
+    2px 2px 0 $darkBlue200;
+}
+
+.nameTitle h1:nth-child(2){
+  color: $blue200;
+  animation: titleWave 4s ease-in-out infinite;
+}
+
+@keyframes titleWave {
+  0%,100%{
+    clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+  }
+  50%{
+    clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+  }
+}
+
+.wavyBlue{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-height: 100vh;
+}
+
+.waveParallax > use{
+  animation: waving 12s linear infinite;
+}
+
+.waveParallax > use:nth-child(1){
+  animation-delay: -2s;
+}
+
+.waveParallax > use:nth-child(2){
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.waveParallax > use:nth-child(3){
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.waveParallax > use:nth-child(4){
+  animation-delay: -4s;
+  animation-duration: 4s;
+}
+
+@keyframes waving {
+  0%{
+    transform: translate(-90px, 0%);
+  }
+  100%{
+    transform: translate(85px, 0%);
+  }
+}

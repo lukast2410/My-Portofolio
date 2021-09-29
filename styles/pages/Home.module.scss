@@ -1,5 +1,83 @@
 @import 'colors';
 
+// ! NAVBAR
+.header{
+  width: 100%;
+  height: min-content;
+  background-color: $darkBlue900;
+}
+
+.nav{
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.nav{
+  *{
+    margin: 0;
+  }
+
+  h1 span{
+    color: $blue200;
+  }
+
+  ul{
+    display: flex;
+
+    li{
+      list-style-type: none;
+
+      a{
+        padding: 0.5rem 0;
+        margin: 0 1.5rem;
+        position: relative;
+        letter-spacing: 1px;
+
+        &:last-child{
+          margin-right: 0;
+        }
+
+        &::before, &::after{
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: $blue500;
+          left: 0;
+          transform: scaleX(0);
+          transition: all 1s;
+        }
+
+        &::before{
+          top: 0;
+          transform-origin: left;
+        }
+
+        &::after{
+          bottom: 0;
+          transform-origin: right;
+        }
+
+        &:hover::before, &:hover::after{
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}
+
+.logoNav{
+  font-weight: bold;
+}
+
+
+// ! HERO
+
 .heroSection{
   height: 100vh;
   background-color: $darkBlue900;
@@ -11,7 +89,6 @@
 }
 
 .nameTitle{
-  color: $white;
   font-size: 3.5rem;
   position: relative;
 }
@@ -26,14 +103,14 @@
 
 .nameTitle h1:nth-child(1){
   color: $darkBlue900;
-  text-shadow: -2px -2px 0 $darkBlue200,  
-    2px -2px 0 $darkBlue200,
-    -2px 2px 0 $darkBlue200,
-    2px 2px 0 $darkBlue200;
+  text-shadow: -2px -2px 0 $blue300,  
+    2px -2px 0 $blue300,
+    -2px 2px 0 $blue300,
+    2px 2px 0 $blue300;
 }
 
 .nameTitle h1:nth-child(2){
-  color: $blue200;
+  color: $blue300;
   animation: titleWave 4s ease-in-out infinite;
 }
 

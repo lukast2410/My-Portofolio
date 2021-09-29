@@ -5,6 +5,19 @@ import styles from '../../styles/pages/Home.module.scss'
 const Home: NextPage = () => {
 	return (
 		<Layout title='Lukas Tanto Kurniawan'>
+			<header className={styles.header}>
+				<div className="container">
+					<nav className={styles.nav}>
+						<h1 className={styles.logoNav}>L<span>T</span></h1>
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">About Me</a></li>
+							<li><a href="#">Skills</a></li>
+							<li><a href="#">Projects</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
 			<section className={styles.heroSection}>
         <div className={styles.nameTitle}>
           <h1>Lukas Tanto Kurniawan</h1>

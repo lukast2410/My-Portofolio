@@ -5,7 +5,7 @@
   width: 100%;
   height: min-content;
   background-color: $darkBlue900;
-  position: sticky;
+  position: absolute;
   top: 0;
   z-index: 10;
 }
@@ -41,16 +41,20 @@
       transform: translateX(100rem);
       animation: slideIn .5s forwards;
 
+      &:first-child{
+        animation-delay: 4.5s;
+      }
+
       &:nth-child(2){
-        animation-delay: .5s;
+        animation-delay: 5s;
       }
       
       &:nth-child(3){
-        animation-delay: 1s;
+        animation-delay: 5.5s;
       }
       
       &:nth-child(4){
-        animation-delay: 1.5s;
+        animation-delay: 6s;
       }
 
       a{
@@ -96,6 +100,7 @@
   font-weight: bold;
   transform: translateX(-100rem);
   animation: slideIn .5s forwards;
+  animation-delay: 4.5s;
 }
 
 @keyframes slideIn {
@@ -117,6 +122,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow-y: hidden;
 }
 
 .nameTitle{
@@ -159,6 +165,16 @@
   bottom: 0;
   width: 100%;
   max-height: 100vh;
+  animation: slideUp 2s linear;
+}
+
+@keyframes slideUp {
+  from{
+    bottom: -25%;
+  }
+  to{
+    bottom: 0;
+  }
 }
 
 .waveParallax > use{
@@ -190,5 +206,26 @@
   }
   100%{
     transform: translate(85px, 0%);
+  }
+}
+
+.dropContainer{
+  position: absolute;
+  bottom: -15rem;
+
+  .dolphinJump{
+    width: 20rem;
+    height: min-content;
+    animation: dropRight 2.5s linear;
+    animation-delay: 2s;
+  }
+}
+
+@keyframes dropRight {
+  0%{
+    transform: rotateZ(-50deg) translate(-125%, -250%);
+  }
+  100%{
+    transform: rotateZ(50deg) translate(100%, -200%);
   }
 }

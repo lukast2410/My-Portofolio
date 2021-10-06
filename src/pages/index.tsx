@@ -2,6 +2,7 @@ import { NextPage } from 'next'
 import Layout from '../components/Layout'
 import styles from '../../styles/pages/Home.module.scss'
 import DolphinJump from '../components/DolphinJump'
+import { BriefcaseIcon } from '@heroicons/react/outline'
 
 const Home: NextPage = () => {
 	return (
@@ -31,9 +32,21 @@ const Home: NextPage = () => {
 				</div>
 			</header>
 			<section className={styles.heroSection}>
+				<div className={styles.shortDescription}>
+					<div className={styles.shortDescriptionContainer}>
+						<div className={styles.fullName}>
+							<h1>Lukas Tanto Kurniawan</h1>
+						</div>
+						<p>I am a Frontend developer</p>
+						<button className={styles.viewWorkBtn}>
+							<BriefcaseIcon className={`icon5`}/>
+							<span>My Projects</span>
+						</button>
+					</div>
+				</div>
 				<div className={styles.nameTitle}>
-					<h1>Lukas Tanto Kurniawan</h1>
-					<h1>Lukas Tanto Kurniawan</h1>
+					<h1>&lt;LT&gt;</h1>
+					<h1>&lt;LT&gt;</h1>
 				</div>
 				<svg className={styles.wavyBlue} viewBox='0 0 150 28' preserveAspectRatio='none'>
 					<defs>

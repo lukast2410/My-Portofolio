@@ -3,50 +3,31 @@ import Layout from '../components/Layout'
 import styles from '../../styles/pages/Home.module.scss'
 import DolphinJump from '../components/DolphinJump'
 import { BriefcaseIcon } from '@heroicons/react/outline'
+import Header from '../components/Header'
 
 const Home: NextPage = () => {
 	return (
 		<Layout title='Lukas Tanto Kurniawan'>
-			<header className={styles.header}>
-				<div className='container'>
-					<nav className={styles.nav}>
-						<h1 className={styles.logoNav}>
-							&lt;<span>L</span>
-							<span>T</span>&gt;
-						</h1>
-						<ul>
-							<li>
-								<a href='#'>Home</a>
-							</li>
-							<li>
-								<a href='#'>About Me</a>
-							</li>
-							<li>
-								<a href='#'>Skills</a>
-							</li>
-							<li>
-								<a href='#'>Projects</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</header>
+			<Header />
 			<section className={styles.heroSection}>
-				<div className={styles.shortDescription}>
-					<div className={styles.shortDescriptionContainer}>
-						<div className={styles.fullName}>
-							<h1>Lukas Tanto Kurniawan</h1>
+				<div className={styles.shortDescriptionContainer}>
+					<div className={styles.shortDescription}>
+						<div className={styles.descContainer}>
+							<div className={styles.fullName}>
+								<h1>Lukas Tanto Kurniawan</h1>
+								<h1>Lukas Tanto K</h1>
+							</div>
+							<p>I am a Frontend developer</p>
+							<button className={styles.viewWorkBtn}>
+								<BriefcaseIcon className={`icon5`} />
+								<span>My Projects</span>
+							</button>
 						</div>
-						<p>I am a Frontend developer</p>
-						<button className={styles.viewWorkBtn}>
-							<BriefcaseIcon className={`icon5`}/>
-							<span>My Projects</span>
-						</button>
 					</div>
-				</div>
-				<div className={styles.nameTitle}>
-					<h1>&lt;LT&gt;</h1>
-					<h1>&lt;LT&gt;</h1>
+					<div className={styles.nameTitle}>
+						<h1>&lt;LT&gt;</h1>
+						<h1>&lt;LT&gt;</h1>
+					</div>
 				</div>
 				<svg className={styles.wavyBlue} viewBox='0 0 150 28' preserveAspectRatio='none'>
 					<defs>
@@ -62,9 +43,8 @@ const Home: NextPage = () => {
 						<use xlinkHref='#gentleWave' x='50' y='5' fill='#00005a' />
 					</g>
 				</svg>
-				<div className={styles.dropContainer}>
-					<DolphinJump />
-				</div>
+				<div className={styles.waveExtend}></div>
+				<DolphinJump />
 			</section>
 		</Layout>
 	)

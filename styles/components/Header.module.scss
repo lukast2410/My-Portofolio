@@ -1,0 +1,97 @@
+@import '../colors';
+
+.header{
+  width: 100%;
+  height: min-content;
+  background-color: $darkBlue900;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+.nav{
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.nav{
+  h1 span:last-child{
+    color: $orange300;
+  }
+
+  h1 span:first-child{
+    color: $blue200;
+  }
+
+  ul{
+    display: flex;
+
+    li{
+      list-style-type: none;
+      animation: fadeIn 1s ease-out;
+
+      a{
+        padding: 0.5rem 0;
+        margin: 0 1.5rem;
+        position: relative;
+        letter-spacing: 1px;
+
+        &:last-child{
+          margin-right: 0;
+        }
+
+        &::before, &::after{
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: $orange300;
+          left: 0;
+          transform: scaleX(0);
+          transition: all 1s;
+        }
+
+        &::before{
+          top: 0;
+          transform-origin: left;
+        }
+
+        &::after{
+          bottom: 0;
+          transform-origin: right;
+        }
+
+        &:hover::before, &:hover::after{
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}
+
+.logoNav{
+  font-weight: bold;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+    transform: none;
+  }
+  to{
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .header{
+    display: none;
+  }
+}

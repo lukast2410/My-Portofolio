@@ -1,98 +1,21 @@
-@import 'colors';
-
-// ! NAVBAR
-.header{
-  width: 100%;
-  height: min-content;
-  background-color: $darkBlue900;
-  position: absolute;
-  top: 0;
-  z-index: 10;
-}
-
-.nav{
-  padding-top: 1.5rem;
-  padding-bottom: 0.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-.nav{
-  h1 span:last-child{
-    color: $orange300;
-  }
-
-  h1 span:first-child{
-    color: $blue200;
-  }
-
-  ul{
-    display: flex;
-
-    li{
-      list-style-type: none;
-      animation: fadeIn 1s ease-out;
-
-      a{
-        padding: 0.5rem 0;
-        margin: 0 1.5rem;
-        position: relative;
-        letter-spacing: 1px;
-
-        &:last-child{
-          margin-right: 0;
-        }
-
-        &::before, &::after{
-          content: '';
-          position: absolute;
-          width: 100%;
-          height: 2px;
-          background-color: $orange300;
-          left: 0;
-          transform: scaleX(0);
-          transition: all 1s;
-        }
-
-        &::before{
-          top: 0;
-          transform-origin: left;
-        }
-
-        &::after{
-          bottom: 0;
-          transform-origin: right;
-        }
-
-        &:hover::before, &:hover::after{
-          transform: scaleX(1);
-        }
-      }
-    }
-  }
-}
-
-.logoNav{
-  font-weight: bold;
-  animation: fadeIn 1s ease-out;
-}
+@import '../colors';
 
 // ! HERO
-
 .heroSection{
   height: 100vh;
   background-color: $darkBlue900;
-  display: flex;
   position: relative;
   overflow: hidden;
 }
 
+.shortDescriptionContainer{
+  height: 95vh;
+  display: flex;
+  position: relative;
+}
+
 .shortDescription{
   flex: 1.25;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -115,6 +38,10 @@
     -webkit-text-fill-color: transparent;
     animation: wideText 2s both ease;
     animation-delay: 3.5s;
+
+    &:nth-child(2){
+      display: none;
+    }
   }
 
   & p{
@@ -146,25 +73,8 @@
   }
 }
 
-@keyframes wideText {
-  0%{
-    opacity: 0;
-    color: $darkBlue900;
-    margin-bottom: -2.5rem;
-  }
-  30%{
-    letter-spacing: 8px;
-    margin-bottom: -2.5rem;
-  }
-  85%{
-    letter-spacing: 2px;
-    margin-bottom: -2.5rem;
-  }
-}
-
 .nameTitle{
   flex: 1;
-  height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -193,36 +103,6 @@
   }
 }
 
-@keyframes textLightIn {
-  0%{
-    opacity: 0;
-  }
-  50.1%,60%,65.1%,80%,90.1%,92%{
-    opacity: 0.35;
-  }
-  40%,50%,60.1%,65%,80.1%,90%,92.1%,100%{
-    opacity: 1;
-  }
-}
-
-@keyframes textWave {
-  0%,100%{
-    clip-path: polygon(0% 46%, 16% 45%, 34% 52%, 50% 61%, 68% 65%, 85% 61%, 100% 53%, 100% 100%, 0% 100%);
-  }
-  50%{
-    clip-path: polygon(0% 59%, 18% 67%, 36% 70%, 51% 66%, 66% 56%, 82% 49%, 100% 4%, 100% 100%, 0% 100%);
-  }
-}
-
-@keyframes titleWave {
-  0%,100%{
-    clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
-  }
-  50%{
-    clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
-  }
-}
-
 .wavyBlue{
   position: absolute;
   bottom: 0;
@@ -230,17 +110,6 @@
   width: 100%;
   max-height: 100vh;
   animation: fadeIn 1s ease;
-}
-
-@keyframes fadeIn {
-  from{
-    opacity: 0;
-    transform: none;
-  }
-  to{
-    opacity: 1;
-    transform: none;
-  }
 }
 
 .waveParallax > use{
@@ -266,6 +135,21 @@
   animation-duration: 4s;
 }
 
+@keyframes textLightIn {
+  0%{
+    opacity: 0;
+  }
+  30%{
+    opacity: 0.7;
+  }
+  50.1%,60%,65.1%,80%,90.1%,92%{
+    opacity: 0.35;
+  }
+  40%,50%,60.1%,65%,80.1%,90%,92.1%,100%{
+    opacity: 1;
+  }
+}
+
 @keyframes waving {
   0%{
     transform: translate(-90px, 0%);
@@ -275,26 +159,152 @@
   }
 }
 
-.dropContainer{
-  position: absolute;
-  width: 100%;
-  background-color: $darkBlue400;
-  bottom: -15vw;
-  z-index: 1;
-
-  .dolphinJump{
-    width: 20vw;
-    height: min-content;
-    animation: dolphinJump 2.5s linear;
-    animation-delay: 1s;
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+    transform: none;
+  }
+  to{
+    opacity: 1;
+    transform: none;
   }
 }
 
-@keyframes dolphinJump {
-  0%{
-    transform: rotateZ(-50deg) translate(0%, 0%);
+@keyframes textWave {
+  0%,100%{
+    clip-path: polygon(0% 46%, 16% 45%, 34% 52%, 50% 61%, 68% 65%, 85% 61%, 100% 53%, 100% 100%, 0% 100%);
   }
-  100%{
-    transform: rotateZ(50deg) translate(225%, -500%);
+  50%{
+    clip-path: polygon(0% 59%, 18% 67%, 36% 70%, 51% 66%, 66% 56%, 82% 49%, 100% 4%, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes titleWave {
+  0%,100%{
+    clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+  }
+  50%{
+    clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes wideText {
+  0%{
+    opacity: 0;
+    color: $darkBlue900;
+    margin-bottom: -2.5rem;
+  }
+  30%{
+    letter-spacing: 6px;
+    margin-bottom: -2.5rem;
+  }
+  85%{
+    letter-spacing: 2px;
+    margin-bottom: -2.5rem;
+  }
+}
+
+@keyframes wideText4 {
+  0%{
+    opacity: 0;
+    color: $darkBlue900;
+    margin-bottom: -2.5rem;
+  }
+  30%{
+    letter-spacing: 4px;
+    margin-bottom: -2.5rem;
+  }
+  85%{
+    letter-spacing: 2px;
+    margin-bottom: -2.5rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .shortDescriptionContainer{
+    flex-direction: column-reverse;
+  }
+
+  .nameTitle{
+    flex: 0.75;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 5.75rem;
+    animation-delay: 0s;
+  }
+  
+  .shortDescription{
+    flex: 1.25;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .descContainer{
+      width: 100%;
+      max-width: 18rem;
+      padding-bottom: 5rem;
+    }
+  
+    .fullName{
+      background-color: $darkBlue900;
+      position: relative;
+    }
+  
+    .fullName h1{
+      white-space: nowrap;
+      font-size: 2.25rem;
+      animation: wideText4 2s both ease;
+      animation-delay: 3.5s;
+
+      &:nth-child(1){
+        display: none;
+      }
+
+      &:nth-child(2){
+        display: block;
+      }
+    }
+  
+    & p{
+      font-size: 1.4rem;
+    }
+  
+    .viewWorkBtn{
+      margin-top: 0.75rem;
+      background-color: $blue400;
+      outline: none;
+      border: none;
+      border-radius: 0.25rem;
+      padding: 0.625rem 0.875rem;
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      cursor: pointer;
+      animation: fadeIn 1s both ease 1;
+      animation-delay: 5.5s;
+  
+      & span{
+        margin-left: 0.375rem;
+      }
+  
+      &:hover{
+        background-color: $blue500;
+      }
+    }
+  }
+
+  .wavyBlue{
+    bottom: 2rem;
+  }
+
+  .waveExtend{
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    height: 2rem;
+    width: 100%;
+    background-color: $darkBlue400;
+    animation: fadeIn 1s ease;
   }
 }

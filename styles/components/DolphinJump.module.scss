@@ -1,0 +1,25 @@
+@import '../colors';
+
+.dropContainer{
+  position: absolute;
+  width: 100%;
+  background-color: $darkBlue400;
+  bottom: -15vw;
+  z-index: 1;
+
+  .dolphinJump{
+    width: 20vw;
+    height: min-content;
+    animation: dolphinJump 2.5s linear;
+    animation-delay: 1s;
+  }
+}
+
+@keyframes dolphinJump {
+  0%{
+    transform: rotateZ(-50deg) translate(0%, 0%);
+  }
+  100%{
+    transform: rotateZ(50deg) translate(225%, -500%);
+  }
+}

@@ -14,8 +14,9 @@ const Home: NextPage = () => {
 					<div className={styles.shortDescription}>
 						<div className={styles.descContainer}>
 							<div className={styles.fullName}>
-								<h1>Lukas Tanto Kurniawan</h1>
-								<h1>Lukas Tanto K</h1>
+								<h1>
+									<span>Lukas Tanto Kurniawan</span>
+								</h1>
 							</div>
 							<p>I am a Frontend developer</p>
 							<button className={styles.viewWorkBtn}>

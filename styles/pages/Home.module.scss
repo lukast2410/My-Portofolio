@@ -254,15 +254,13 @@
     .fullName h1{
       white-space: nowrap;
       font-size: 2.25rem;
-      animation: wideText4 2s both ease;
-      animation-delay: 3.5s;
 
-      &:nth-child(1){
+      & span{
         display: none;
       }
 
-      &:nth-child(2){
-        display: block;
+      &::after{
+        content: 'Lukas Tanto';
       }
     }
   

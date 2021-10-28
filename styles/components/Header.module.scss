@@ -1,6 +1,6 @@
 @import '../colors';
 
-.header{
+.header {
   width: 100%;
   height: min-content;
   background-color: $darkBlue900;
@@ -9,7 +9,7 @@
   z-index: 10;
 }
 
-.nav{
+.nav {
   padding-top: 1.5rem;
   padding-bottom: 0.5rem;
   display: flex;
@@ -19,33 +19,48 @@
   font-weight: 500;
 }
 
-.nav{
-  h1 span:last-child{
+.nav {
+  .mainNav {
+    animation: fadeIn 1s ease-out;
+  }
+
+  h1 span:last-child {
     color: $orange300;
   }
 
-  h1 span:first-child{
+  h1 span:first-child {
     color: $blue200;
   }
 
-  ul{
+  ul {
+    animation: fadeIn 1s ease-out;
     display: flex;
 
-    li{
+    li {
       list-style-type: none;
-      animation: fadeIn 1s ease-out;
 
-      a{
+      a {
         padding: 0.5rem 0;
         margin: 0 1.5rem;
         position: relative;
         letter-spacing: 1px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-        &:last-child{
+        .navIcon {
+          display: none;
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+
+        &:last-child {
           margin-right: 0;
         }
 
-        &::before, &::after{
+        &::before,
+        &::after {
           content: '';
           position: absolute;
           width: 100%;
@@ -56,17 +71,18 @@
           transition: all 1s;
         }
 
-        &::before{
+        &::before {
           top: 0;
           transform-origin: left;
         }
 
-        &::after{
+        &::after {
           bottom: 0;
           transform-origin: right;
         }
 
-        &:hover::before, &:hover::after{
+        &:hover::before,
+        &:hover::after {
           transform: scaleX(1);
         }
       }
@@ -74,24 +90,78 @@
   }
 }
 
-.logoNav{
+.logoNav {
   font-weight: bold;
-  animation: fadeIn 1s ease-out;
+}
+
+.showMenuGrid {
+  bottom: 0 !important;
 }
 
 @keyframes fadeIn {
-  from{
+  from {
     opacity: 0;
     transform: none;
   }
-  to{
+
+  to {
     opacity: 1;
     transform: none;
   }
 }
 
 @media screen and (max-width: 640px) {
-  .header{
-    display: none;
+  .header {
+    background-color: $darkBlue400;
+    position: fixed;
+    bottom: 0;
+    top: unset;
+    box-shadow: 0px 0px 10px $darkBlue600;
+  }
+
+  .nav {
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-start;
+
+    ul {
+      animation: none;
+      position: fixed;
+      bottom: -100%;
+      left: 0;
+      padding: 1rem 0;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.5rem;
+      background-color: $darkBlue400;
+      box-shadow: 0px 0px 10px $darkBlue600;
+      transition: .3s ease;
+
+      li {
+
+        a {
+          margin: 0;
+          text-transform: none;
+
+          .navIcon {
+            display: block;
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .mainNav {
+    width: 100%;
+    padding: 1rem 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logoNav {
+    font-weight: bold;
   }
 }

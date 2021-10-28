@@ -2,8 +2,8 @@ import { NextPage } from 'next'
 import Layout from '../components/Layout'
 import styles from '../../styles/pages/Home.module.scss'
 import DolphinJump from '../components/DolphinJump'
-import { BriefcaseIcon } from '@heroicons/react/outline'
 import Header from '../components/Header'
+import { HiOutlineBriefcase } from 'react-icons/hi'
 
 const Home: NextPage = () => {
 	return (
@@ -20,7 +20,7 @@ const Home: NextPage = () => {
 							</div>
 							<p>I am a Frontend developer</p>
 							<button className={styles.viewWorkBtn}>
-								<BriefcaseIcon className={`icon5`} />
+								<HiOutlineBriefcase className={`icon5`} />
 								<span>My Projects</span>
 							</button>
 						</div>
@@ -46,6 +46,10 @@ const Home: NextPage = () => {
 				</svg>
 				<div className={styles.waveExtend}></div>
 				<DolphinJump />
+				<div className={styles.scrollDown}></div>
+			</section>
+			<section className={styles.skillSection}>
+
 			</section>
 		</Layout>
 	)

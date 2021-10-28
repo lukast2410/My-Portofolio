@@ -23,3 +23,9 @@
     transform: rotateZ(50deg) translate(225%, -500%);
   }
 }
+
+@media screen and (max-width: 640px) {
+  .dropContainer{
+    bottom: 0;
+  }
+}

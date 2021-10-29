@@ -1,7 +1,147 @@
 @import '../colors';
 
-.aboutSection{
+.aboutSection {
+  margin-top: -1px;
   width: 100%;
   height: 100vh;
-  background-color: $darkBlue400;
+  background-image: linear-gradient($darkBlue400, $darkBlue600);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1{
+    font-size: 15rem;
+  }
+}
+
+.bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 10;
+  display: flex;
+  align-items: flex-end;
+
+  .bubble {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at top left, rgba(255, 255, 255, 0.1) 60%, rgba(237, 237, 237, 0.5) 110%);
+    position: relative;
+    bottom: 10%;
+    border: solid 1px rgba(255, 255, 255, 0.2);
+    box-shadow: 2px 2px 1rem 5px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(2px) saturate(175%) brightness(85%);
+    animation: bubble ease-out both infinite;
+
+    &::before {
+      content: '';
+      width: calc(100% - 80%);
+      height: calc(100% - 70%);
+      position: absolute;
+      top: 20%;
+      left: 25%;
+      background: rgba(255, 255, 255, 0.6);
+      box-shadow: 0 0 0.75rem 5px rgba(255, 255, 255, 0.3);
+      transform: rotate(35deg);
+      border-radius: 50%;
+    }
+  }
+
+  .bubble:nth-child(even) {
+    background: radial-gradient(ellipse at top right, rgba(255, 255, 255, 0.1) 60%, rgba(237, 237, 237, 0.5) 110%);
+
+    &::before {
+      top: 20%;
+      left: unset;
+      right: 25%;
+      transform: rotate(-35deg);
+    }
+  }
+
+  .bubble:nth-child(3n - 2){
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .bubble:nth-child(3n - 1){
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .bubble:nth-child(3n){
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .bubble:nth-child(6n){
+    width: 8.5rem;
+    height: 8.5rem;
+  }
+
+  .bubble:nth-child(1){
+    left: 5%;
+    animation-duration: 10s;
+  }
+
+  .bubble:nth-child(2){
+    left: 12%;
+    animation-duration: 14s;
+  }
+
+  .bubble:nth-child(3){
+    left: 20%;
+    animation-duration: 12s;
+    animation-delay: 5s;
+  }
+
+  .bubble:nth-child(4){
+    left: 37.5%;
+    animation-duration: 16s;
+  }
+
+  .bubble:nth-child(5){
+    left: 45%;
+    animation-duration: 18s;
+  }
+
+  .bubble:nth-child(6){
+    left: 17.5%;
+    animation-duration: 20s;
+    animation-delay: 4s;
+    bottom: 2.5%;
+  }
+
+  .bubble:nth-child(7){
+    left: 40%;
+    animation-duration: 13s;
+    animation-delay: 4s;
+  }
+
+  .bubble:nth-child(8){
+    left: 50%;
+    animation-duration: 11s;
+  }
+}
+
+@keyframes bubble {
+  0%{
+    opacity: 0;
+    transform: scale(0) translateY(-100px) translateX(0) rotate(0deg);
+  }
+  10%{
+    opacity: 1;
+    transform: scale(0) translateY(0) translateX(50%) rotate(20deg);
+  }
+  80%{
+    opacity: 0.9;
+  }
+  100%{
+    transform: scale(1.5) translateY(-45vh) rotate(135deg) translateX(-25%);
+    opacity: 0;
+  }
 }

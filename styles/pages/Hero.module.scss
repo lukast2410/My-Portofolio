@@ -9,9 +9,13 @@
 }
 
 .shortDescriptionContainer {
+  top: 0;
+  left: 0;
   height: 95vh;
+  width: 100%;
   display: flex;
-  position: relative;
+  position: absolute;
+  transition: ease;
 }
 
 .shortDescription {
@@ -19,6 +23,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  .short{
+    display: flex;
+    align-items: center;
+  }
 
   .links {
     display: flex;
@@ -28,7 +37,7 @@
     animation-delay: 6s;
 
     a {
-      margin-bottom: 0.75rem;
+      margin: 0.5rem;
     }
 
     .linkIcon {
@@ -344,8 +353,22 @@
 
     .descContainer {
       width: 100%;
-      max-width: 18rem;
       padding-bottom: 5rem;
+    }
+
+    .short{
+      width: 100%;
+      max-width: 18rem;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .links {
+      flex-direction: row;
+  
+      a {
+        margin: 0 1.25rem 0 0.25rem;
+      }
     }
 
     .fullName {

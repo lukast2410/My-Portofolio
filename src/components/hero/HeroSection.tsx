@@ -4,31 +4,55 @@ import { FaGithubAlt, FaInstagram } from 'react-icons/fa'
 import { AiOutlineLinkedin } from 'react-icons/ai'
 import TypedText from './TypedText'
 import styles from '../../../styles/pages/Hero.module.scss'
+import { useEffect, useState } from 'react'
 
 export default function HeroSection() {
+	const [offsetY, setOffsetY] = useState(0)
+	const handleScoll = () => setOffsetY(window.scrollY)
+	console.log(offsetY)
+
+	useEffect(() => {
+		window.addEventListener('scroll', handleScoll)
+
+		return () => {
+			window.removeEventListener('scroll', handleScoll)
+		}
+	}, [])
+
 	return (
 		<section className={styles.heroSection}>
-			<div className={styles.shortDescriptionContainer}>
+			<div
+				className={styles.shortDescriptionContainer}
+				style={{ transform: `translateY(${offsetY * 0.65}px)` }}
+			>
 				<div className={styles.shortDescription}>
-          <div className={styles.links}>
-            <a href="https://github.com/lukast2410"><FaGithubAlt className={`icon6 ${styles.linkIcon}`}/></a>
-            <a href="https://www.linkedin.com/in/lukas-t-b38884137/"><AiOutlineLinkedin className={`icon6 ${styles.linkIcon}`}/></a>
-            <a href="https://www.instagram.com/lukast2410/"><FaInstagram className={`icon6 ${styles.linkIcon}`}/></a>
-          </div>
-					<div className={styles.descContainer}>
-						<div className={styles.fullName}>
-							<h1>
-								<span>Lukas Tanto Kurniawan</span>
-							</h1>
+					<div className={styles.short}>
+						<div className={styles.links}>
+							<a href='https://github.com/lukast2410'>
+								<FaGithubAlt className={`icon6 ${styles.linkIcon}`} />
+							</a>
+							<a href='https://www.linkedin.com/in/lukas-t-b38884137/'>
+								<AiOutlineLinkedin className={`icon6 ${styles.linkIcon}`} />
+							</a>
+							<a href='https://www.instagram.com/lukast2410/'>
+								<FaInstagram className={`icon6 ${styles.linkIcon}`} />
+							</a>
 						</div>
-						<p>
-							I am a&nbsp;
-							<TypedText />
-						</p>
-						<button className={styles.viewWorkBtn}>
-							<HiOutlineBriefcase className={`icon5`} />
-							<span>My Projects</span>
-						</button>
+						<div className={styles.descContainer}>
+							<div className={styles.fullName}>
+								<h1>
+									<span>Lukas Tanto Kurniawan</span>
+								</h1>
+							</div>
+							<p>
+								I am a&nbsp;
+								<TypedText />
+							</p>
+							<button className={styles.viewWorkBtn}>
+								<HiOutlineBriefcase className={`icon5`} />
+								<span>My Projects</span>
+							</button>
+						</div>
 					</div>
 				</div>
 				<div className={styles.nameTitle}>

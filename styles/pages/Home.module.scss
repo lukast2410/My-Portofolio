@@ -24,6 +24,7 @@
   .fullName {
     background-color: $darkBlue900;
     position: relative;
+    z-index: 1;
   }
 
   .fullName h1 {

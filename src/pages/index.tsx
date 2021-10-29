@@ -1,9 +1,10 @@
 import { NextPage } from 'next'
 import Layout from '../components/Layout'
 import styles from '../../styles/pages/Home.module.scss'
-import DolphinJump from '../components/DolphinJump'
+import DolphinJump from '../components/hero/DolphinJump'
 import Header from '../components/Header'
 import { HiOutlineBriefcase } from 'react-icons/hi'
+import TypedText from '../components/hero/TypedText'
 
 const Home: NextPage = () => {
 	return (
@@ -18,7 +19,7 @@ const Home: NextPage = () => {
 									<span>Lukas Tanto Kurniawan</span>
 								</h1>
 							</div>
-							<p>I am a Frontend developer</p>
+							<p>I am a&nbsp;<TypedText/></p>
 							<button className={styles.viewWorkBtn}>
 								<HiOutlineBriefcase className={`icon5`} />
 								<span>My Projects</span>

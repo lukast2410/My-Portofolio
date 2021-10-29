@@ -94,6 +94,10 @@
   font-weight: bold;
 }
 
+.menuGrid{
+  display: none;
+}
+
 .showMenuGrid {
   bottom: 0 !important;
 }
@@ -163,5 +167,9 @@
 
   .logoNav {
     font-weight: bold;
+  }
+
+  .menuGrid{
+    display: block;
   }
 }

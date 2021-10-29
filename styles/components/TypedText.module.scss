@@ -1,0 +1,23 @@
+.cursor{
+  position: relative;
+}
+
+.cursor::after{
+  bottom: 0.125rem;
+  right: -0.25rem;
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 2rem;
+  background: white;
+  animation: blink 0.5s linear infinite alternate;
+}
+
+@keyframes blink {
+  0%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 1;
+  }
+}

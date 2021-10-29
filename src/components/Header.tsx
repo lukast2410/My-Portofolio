@@ -22,7 +22,7 @@ export default function Header() {
 							&lt;<span>L</span>
 							<span>T</span>&gt;
 						</h1>
-						<HiOutlineViewGrid className="icon5" onClick={() => setShow(true)}/>
+						<HiOutlineViewGrid className={`icon5 ${styles.menuGrid}`} onClick={() => setShow(true)}/>
 					</div>
 					<ul className={`${show ? styles.showMenuGrid : ''}`}>
 						<li>

@@ -1,4 +1,4 @@
-import styles from '../../styles/components/DolphinJump.module.scss'
+import styles from '../../../styles/components/DolphinJump.module.scss'
 
 export default function DolphinJump() {
 	return (

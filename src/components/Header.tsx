@@ -34,7 +34,7 @@ export default function Header() {
 							</a>
 						</li>
 						<li>
-							<a href='#'>
+							<a href='#about'>
 								<div className={styles.iconContainer}>
 									<HiOutlineUser className={styles.navIcon} />
 								</div>
@@ -42,7 +42,7 @@ export default function Header() {
 							</a>
 						</li>
 						<li>
-							<a href='#'>
+							<a href='#skills'>
 								<div className={styles.iconContainer}>
 									<HiOutlineChartSquareBar className={styles.navIcon} />
 								</div>
@@ -50,7 +50,7 @@ export default function Header() {
 							</a>
 						</li>
 						<li>
-							<a href='#'>
+							<a href='#projects'>
 								<div className={styles.iconContainer}>
 									<HiOutlineBriefcase className={styles.navIcon} />
 								</div>
@@ -58,7 +58,7 @@ export default function Header() {
 							</a>
 						</li>
 						<li>
-							<a href='#'>
+							<a href='#achievement'>
 								<div className={styles.iconContainer}>
 									<HiOutlineStar className={styles.navIcon} />
 								</div>
@@ -66,7 +66,7 @@ export default function Header() {
 							</a>
 						</li>
 						<li>
-							<a href='#'>
+							<a href='#contacts'>
 								<div className={styles.iconContainer}>
 									<HiOutlineMail className={styles.navIcon} />
 								</div>

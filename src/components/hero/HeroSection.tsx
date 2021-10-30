@@ -9,7 +9,6 @@ import { useEffect, useState } from 'react'
 export default function HeroSection() {
 	const [offsetY, setOffsetY] = useState(0)
 	const handleScoll = () => setOffsetY(window.scrollY)
-	console.log(offsetY)
 
 	useEffect(() => {
 		window.addEventListener('scroll', handleScoll)

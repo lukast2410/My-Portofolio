@@ -9,9 +9,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.container{
+  height: 75%;
+  width: 90%;
+  max-width: 768px;
+  text-align: center;
 
   h1{
-    font-size: 15rem;
+    font-size: 5rem;
+    color: $orange300;
+    margin-bottom: 4rem;
+  }
+
+  p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: justify;
+    margin: 2rem 0;
   }
 }
 

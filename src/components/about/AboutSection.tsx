@@ -25,6 +25,9 @@ export default function AboutSection() {
 
 			<div className={styles.images}>
 				<img src="/assets/me-bass.png" alt="Bass" />
+				<img src="/assets/child-gkj.jpg" alt="GKJ" />
+				<img src="/assets/child.png" alt="Child" />
+				<img src="/assets/core-training.jpg" alt="Core Training" />
 			</div>
 
 			<div className={styles.container}>
@@ -32,14 +35,13 @@ export default function AboutSection() {
 					data-aos='fade-up'
 					data-aos-easing='ease-in-sine'
 					data-aos-duration='1000'
-				>{`{ Hello World }`}</h1>
+				><span>{`{ Hello World }`}</span></h1>
 				<p>
-					My name is <span>Lukas Tanto Kurniawan</span>, I am a Mobile & Web Developer, interested in UI & UX
-					Design, Mobile Application Development, Frontend & Backend Development.
+					My name is <a href='https://www.linkedin.com/in/lukas-t-b38884137/'><span>Lukas Tanto Kurniawan</span></a>, I am a <span>Mobile & Web Developer</span>, interested in <span>UI & UX	Design</span>, <span>Mobile Application Development</span>, <span>Frontend & Backend Development</span>.
 				</p>
 				<p>
-					I love to discover, learn, and make new things especially at building a functional application with
-					aesthetic design to create an amazing and great user experience. I also love to share my knowledge
+					I love to discover, learn, and make new things especially at building a <span>functional application</span> with&nbsp;
+					<span>aesthetic design</span> to create an amazing and great user experience. I also love to share my knowledge
 					and manage people to work with the best performance.
 				</p>
 				<div className={styles.links}>

@@ -1,13 +1,21 @@
 import styles from '../../../styles/pages/About.module.scss'
 import AOS from 'aos'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { HiOutlineBriefcase } from 'react-icons/hi'
 import { FaBehanceSquare, FaGithubAlt, FaInstagram } from 'react-icons/fa'
 import { AiOutlineLinkedin } from 'react-icons/ai'
 
 export default function AboutSection() {
+	const [offsetY, setOffsetY] = useState(0)
+	const handleScoll = () => setOffsetY(window.scrollY)
+
 	useEffect(() => {
 		AOS.init()
+		window.addEventListener('scroll', handleScoll)
+
+		return () => {
+			window.removeEventListener('scroll', handleScoll)
+		}
 	}, [])
 
 	return (
@@ -24,10 +32,10 @@ export default function AboutSection() {
 			</div>
 
 			<div className={styles.images}>
-				<img src="/assets/me-bass.png" alt="Bass" />
-				<img src="/assets/child-gkj.jpg" alt="GKJ" />
-				<img src="/assets/child.png" alt="Child" />
-				<img src="/assets/core-training.jpg" alt="Core Training" />
+				<img src="/assets/me-bass.png" alt="Bass" style={{ transform: `translateY(${offsetY * 0.15}px)`}}/>
+				<img src="/assets/child-gkj.jpg" alt="GKJ" style={{ transform: `translateY(-${offsetY * 0.15}px)`}}/>
+				{/* <img src="/assets/child.png" alt="Child" /> */}
+				{/* <img src="/assets/core-training.jpg" alt="Core Training" /> */}
 			</div>
 
 			<div className={styles.container}>

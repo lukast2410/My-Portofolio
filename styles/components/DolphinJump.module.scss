@@ -7,6 +7,7 @@
   background-color: $darkBlue400;
   bottom: -15vw;
   z-index: 1;
+  animation: fadeIn 1s both ease 1;
 
   .dolphinJump{
     width: 20vw;
@@ -25,8 +26,20 @@
   }
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @media screen and (max-width: 640px) {
   .dropContainer{
-    bottom: 0;
+    bottom: 5vw;
   }
 }

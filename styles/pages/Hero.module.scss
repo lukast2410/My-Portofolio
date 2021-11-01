@@ -139,7 +139,6 @@
   z-index: 2;
   width: 100%;
   max-height: 100vh;
-  animation: fadeIn 1s ease;
 }
 
 .waveParallax>use {
@@ -418,17 +417,16 @@
   }
 
   .wavyBlue {
-    bottom: 4.5rem;
+    bottom: 6.5rem;
   }
 
   .waveExtend {
     position: absolute;
     bottom: 0;
     z-index: 2;
-    height: 4.5rem;
+    height: 6.5rem;
     width: 100%;
     background-color: $darkBlue400;
-    animation: fadeIn 1s ease;
   }
 
   .scrollDown {

@@ -81,7 +81,7 @@
     span{
       -webkit-text-stroke: white .5px;
       background: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, #fff 50%, #fff);
-      -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
       background-size: 200%;
       font-weight: 700;

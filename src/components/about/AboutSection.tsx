@@ -37,11 +37,16 @@ export default function AboutSection() {
 					data-aos-duration='1000'
 				><span>{`{ Hello World }`}</span></h1>
 				<p>
-					My name is <a href='https://www.linkedin.com/in/lukas-t-b38884137/'><span>Lukas Tanto Kurniawan</span></a>, I am a <span>Mobile & Web Developer</span>, interested in <span>UI & UX	Design</span>, <span>Mobile Application Development</span>, <span>Frontend & Backend Development</span>.
+					My name is&nbsp;
+					<a href='https://www.linkedin.com/in/lukas-t-b38884137/'>
+						<span data-hover="Lukas">Lukas&nbsp;</span>
+						<span data-hover="Tanto">Tanto&nbsp;</span>
+						<span data-hover="Kurniawan">Kurniawan</span>
+					</a>
+					, I am a Mobile & Web Developer, interested in UI & UX	Design, Mobile Application Development, Frontend & Backend Development.
 				</p>
 				<p>
-					I love to discover, learn, and make new things especially at building a <span>functional application</span> with&nbsp;
-					<span>aesthetic design</span> to create an amazing and great user experience. I also love to share my knowledge
+					I love to discover, learn, and make new things especially at building a functional application with aesthetic design to create an amazing and great user experience. I also love to share my knowledge
 					and manage people to work with the best performance.
 				</p>
 				<div className={styles.links}>

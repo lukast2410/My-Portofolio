@@ -1,7 +1,7 @@
 import styles from '../../../styles/pages/About.module.scss'
 import AOS from 'aos'
+import 'aos/dist/aos.css'
 import { useEffect, useState } from 'react'
-import { HiOutlineBriefcase } from 'react-icons/hi'
 import { FaBehanceSquare, FaGithubAlt, FaInstagram } from 'react-icons/fa'
 import { AiOutlineLinkedin } from 'react-icons/ai'
 
@@ -10,7 +10,9 @@ export default function AboutSection() {
 	const handleScoll = () => setOffsetY(window.scrollY)
 
 	useEffect(() => {
-		AOS.init()
+		AOS.init({
+			easing: 'ease-in-sine',
+		})
 		window.addEventListener('scroll', handleScoll)
 
 		return () => {
@@ -40,11 +42,8 @@ export default function AboutSection() {
 
 			<div className={styles.container}>
 				<h1
-					data-aos='fade-up'
-					data-aos-easing='ease-in-sine'
-					data-aos-duration='1000'
 				><span>{`{ Hello World }`}</span></h1>
-				<p>
+				<p data-aos='fade-right'>
 					My name is&nbsp;
 					<a href='https://www.linkedin.com/in/lukas-t-b38884137/'>
 						<span data-hover="Lukas">Lukas&nbsp;</span>
@@ -53,7 +52,7 @@ export default function AboutSection() {
 					</a>
 					, I am a Mobile & Web Developer, interested in UI & UX	Design, Mobile Application Development, Frontend & Backend Development.
 				</p>
-				<p>
+				<p data-aos='fade-left' data-aos-delay='500'>
 					I love to discover, learn, and make new things especially at building a functional application with aesthetic design to create an amazing and great user experience. I also love to share my knowledge
 					and manage people to work with the best performance.
 				</p>

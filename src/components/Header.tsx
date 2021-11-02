@@ -17,12 +17,14 @@ export default function Header() {
 		<header className={styles.header}>
 			<div className='container'>
 				<nav className={styles.nav}>
-					<div className={styles.mainNav}>
+					<div className={styles.mainNav} >
 						<h1 className={styles.logoNav}>
 							&lt;<span>L</span>
 							<span>T</span>&gt;
 						</h1>
-						<HiOutlineViewGrid className={`icon5 ${styles.menuGrid}`} onClick={() => setShow(true)}/>
+						<button onFocus={() => setShow(true)} onBlur={() => setShow(false)}>
+							<HiOutlineViewGrid className={`icon5 ${styles.menuGrid}`} />
+						</button>
 					</div>
 					<ul className={`${show ? styles.showMenuGrid : ''}`}>
 						<li>

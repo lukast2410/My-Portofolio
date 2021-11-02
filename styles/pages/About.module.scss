@@ -2,7 +2,8 @@
 
 .aboutSection {
   width: 100%;
-  height: 100vh;
+  height: min-content;
+  min-height: 50rem;
   background-image: linear-gradient($darkBlue400, $darkBlue600);
   position: relative;
   display: flex;
@@ -130,7 +131,7 @@
 
 .bubbles {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   height: 100%;
   width: 100%;
@@ -244,18 +245,54 @@
 @keyframes bubble {
   0%{
     opacity: 0;
-    transform: scale(0) translateY(-100px) translateX(0);
+    bottom: 15%;
+    transform: scale(0) translateX(0);
   }
   10%{
     opacity: 1;
-    transform: scale(0) translateY(0) translateX(50%);
+    bottom: 10%;
+    transform: scale(0) translateX(50%);
   }
   80%{
     opacity: 0.9;
   }
   100%{
-    transform: scale(1.5) translateY(-45vh) translateX(-25%);
+    bottom: 77.5%;
+    transform: scale(1.5) translateX(-25%);
     opacity: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .aboutSection {
+    height: min-content;
+    min-height: 50rem;
+  }
+
+  .images{
+    img{
+      opacity: 0.35;
+    }
+
+    img:nth-child(1){
+      left: 5%;
+    }
+  
+    img:nth-child(2){
+      right: 7.5%;
+    }
+  }
+}
+
+@media screen and (max-width: 7680px) {
+  .images{
+    img:nth-child(1){
+      left: 3%;
+    }
+  
+    img:nth-child(2){
+      right: 3%;
+    }
   }
 }
 
@@ -265,10 +302,6 @@
   }
 
   .images{
-    img{
-      opacity: 0.35;
-    }
-
     img:nth-child(1){
       left: 5%;
       top: -7.5%;

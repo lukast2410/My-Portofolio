@@ -32,8 +32,8 @@ export default function AboutSection() {
 			</div>
 
 			<div className={styles.images}>
-				<img src="/assets/me-bass.png" alt="Bass" style={{ transform: `translateY(${offsetY * 0.15}px)`}}/>
-				<img src="/assets/child-gkj.jpg" alt="GKJ" style={{ transform: `translateY(-${offsetY * 0.15}px)`}}/>
+				<img src="/assets/me-bass.png" alt="Bass" style={{ transform: `translateY(${offsetY * 0.025}%)`}}/>
+				<img src="/assets/child-gkj.jpg" alt="GKJ" style={{ transform: `translateY(-${offsetY * 0.025}%)`}}/>
 				{/* <img src="/assets/child.png" alt="Child" /> */}
 				{/* <img src="/assets/core-training.jpg" alt="Core Training" /> */}
 			</div>

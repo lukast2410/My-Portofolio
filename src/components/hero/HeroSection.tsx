@@ -47,10 +47,10 @@ export default function HeroSection() {
 								I am a&nbsp;
 								<TypedText />
 							</p>
-							<button className={styles.viewWorkBtn}>
+							<a href="#projects" className={styles.viewWorkBtn}>
 								<HiOutlineBriefcase className={`icon5`} />
 								<span>My Projects</span>
-							</button>
+							</a>
 						</div>
 					</div>
 				</div>

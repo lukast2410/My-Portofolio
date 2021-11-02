@@ -23,7 +23,7 @@ export default function Header() {
 							<span>T</span>&gt;
 						</h1>
 						<button onFocus={() => setShow(true)} onBlur={() => setShow(false)}>
-							<HiOutlineViewGrid className={`icon5 ${styles.menuGrid}`} />
+							<HiOutlineViewGrid className={`icon6 ${styles.menuGrid}`} />
 						</button>
 					</div>
 					<ul className={`${show ? styles.showMenuGrid : ''}`}>

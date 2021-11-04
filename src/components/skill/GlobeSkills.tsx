@@ -65,12 +65,11 @@ export default function GlobeSkills() {
 							hue: 'white',
 						}),
 					padding: 5,
-					flex: 1,
 				}}
 				rotate={() => Math.round(Math.random()) * 90}
 			>
-				{skills.map((s) => (
-					<div style={{fontSize: s.value}}>
+				{skills.map((s, idx) => (
+					<div key={idx} style={{fontSize: s.value}}>
 						{s.text}
 					</div>
 				))}

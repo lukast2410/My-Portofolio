@@ -15,25 +15,58 @@
   max-width: 1024px;
   height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
 .skillDescription{
-  flex: 0.75;
+  flex: 1;
   width: 100%;
 
-  h1{
-    text-align: center;
-    font-size: 5rem;
+  .title{
+    font-size: 4rem;
+  }
+
+  span{
+    color: $orange200;
+    display: inline-block;
+    transition: all .3s ease-in-out;
+  }
+
+  span:hover{
+    animation: letterAnimation 1s both;
   }
 }
+
 .otherSkills{
   flex: 1;
   width: 100%;
   height: 100%;
 }
 
+@keyframes letterAnimation {
+  0%{
+    transform: scale3d(1,1,1);
+  }
+  30%{
+    transform: scale3d(1.25,0.75,1);
+  }
+  40%{
+    transform: scale3d(0.75,1.25,1);
+  }
+  50%{
+    transform: scale3d(1.15,0.85,1);
+  }
+  65%{
+    transform: scale3d(0.95,1.05,1);
+  }
+  75%{
+    transform: scale3d(1.05,0.95,1);
+  }
+  100%{
+    transform: scale3d(1,1,1);
+  }
+}
 
 @media screen and (max-width: 768px) {
   .container{

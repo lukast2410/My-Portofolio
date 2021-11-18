@@ -47,11 +47,11 @@ export default function GlobeSkills() {
 		{ text: 'Axure', value: 30 },
 	]
 
-	useEffect(() => {
-		setInterval(() => {
-			setTest((x) => x + 1)
-		}, 10000)
-	}, [])
+	// useEffect(() => {
+	// 	setInterval(() => {
+	// 		setTest((x) => x + 1)
+	// 	}, 20000)
+	// }, [])
 
 	return (
 		<div className={styles.globeContainer}>
@@ -66,10 +66,9 @@ export default function GlobeSkills() {
 						}),
 					padding: 5,
 				}}
-				rotate={() => Math.round(Math.random()) * 90}
 			>
 				{skills.map((s, idx) => (
-					<div key={idx} style={{fontSize: s.value}}>
+					<div key={idx} style={{fontSize: (s.value-5)}}>
 						{s.text}
 					</div>
 				))}

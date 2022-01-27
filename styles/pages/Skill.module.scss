@@ -1,75 +1,222 @@
 @import '../colors';
 
-.skillSection{
+.skillSection {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-image: linear-gradient($darkBlue600, $darkBlue700);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4rem 0;
+  padding: 2rem 0 4rem 0;
 }
 
-.container{
+.container {
   width: 90%;
   max-width: 1024px;
   height: 100%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
 
-.skillDescription{
-  flex: 1;
-  width: 100%;
-
-  .title{
+  .title {
+    width: 100%;
+    text-align: center;
     font-size: 4rem;
-  }
 
-  span{
-    color: $orange200;
-    display: inline-block;
-    transition: all .3s ease-in-out;
-  }
+    span {
+      color: $orange200;
+      display: inline-block;
+      transition: all .3s ease-in-out;
+    }
 
-  span:hover{
-    animation: letterAnimation 1s both;
+    span:hover {
+      animation: letterAnimation 1s both;
+    }
   }
 }
 
-.otherSkills{
-  flex: 1;
+.skills {
+  margin-top: 2rem;
   width: 100%;
-  height: 100%;
+
+  .skill5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: .5rem;
+  }
+
+  .skill4 {
+    margin-top: 2rem;
+    padding: 0 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: .5rem;
+  }
+
+  .skill3 {
+    margin-top: 2rem;
+    padding: 0 8rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .5rem;
+  }
+
+  .skill2 {
+    margin-top: 2rem;
+    padding: 0 12rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+  }
+
+  .skillItem {
+    text-align: center;
+
+    img {
+      height: 3.5rem;
+      width: 3.5rem;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    h4 {
+      font-weight: 500;
+      font-size: 1.1em;
+    }
+  }
+}
+
+.slideContainer {
+  margin-top: 2rem;
+}
+
+.skillSliding {
+  width: 100%;
+
+  &:nth-child(even) {
+    animation: sliding 25s linear infinite;
+  }
+
+  &:nth-child(odd) {
+    animation: sliding 25s linear infinite reverse;
+  }
+
+  span {
+    line-height: 1;
+    white-space: nowrap;
+    font-size: 5vw;
+    font-weight: 900;
+    text-shadow: #fff 0 0 2px, #fff 0 0 2px, #fff 0 0 2px, #fff 0 0 2px, #fff 0 0 2px, #fff 0 0 2px;
+    color: $darkBlue700;
+  }
+
+  span:nth-child(even) {
+    font-style: italic;
+  }
+
+  span::before {
+    content: "--";
+    margin: 0 1rem;
+  }
+}
+
+@keyframes sliding {
+  0% {
+    transform: translateZ(0);
+  }
+
+  100% {
+    transform: translate3d(-55vw, 0, 0);
+  }
 }
 
 @keyframes letterAnimation {
-  0%{
-    transform: scale3d(1,1,1);
+  0% {
+    transform: scale3d(1, 1, 1);
   }
-  30%{
-    transform: scale3d(1.25,0.75,1);
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
   }
-  40%{
-    transform: scale3d(0.75,1.25,1);
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
   }
-  50%{
-    transform: scale3d(1.15,0.85,1);
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
   }
-  65%{
-    transform: scale3d(0.95,1.05,1);
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
   }
-  75%{
-    transform: scale3d(1.05,0.95,1);
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
   }
-  100%{
-    transform: scale3d(1,1,1);
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pushDown {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: fit-content;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .container{
+  .container {
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    .title {
+      width: 100%;
+      text-align: center;
+      font-size: 2.75em;
+    }
+  }
+
+  .skills {
+    .skill5 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem .5rem;
+
+      div:nth-child(3){
+        grid-column: 1 / span 2;
+      }
+    }
+
+    .skill4 {
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem .5rem;
+    }
+
+    .skill3 {
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem .5rem;
+
+      div:nth-child(1){
+        grid-column: 1 / span 2;
+      }
+    }
+
+    .skill2 {
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem .5rem;
+    }
   }
 }

@@ -477,3 +477,29 @@
     }
   }
 }
+
+@media screen and (min-width: 2500px) {
+  .shortDescription{
+    .fullName h1 {
+      font-size: 6em;
+    }
+
+    & p {
+      font-size: 3em;
+    }
+
+    .viewWorkBtn {
+      font-size: 2em;
+      padding: 1rem 1.5rem;
+      font-weight: normal;
+
+      & span {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  .nameTitle {
+    font-size: 14.5em;
+  }
+}

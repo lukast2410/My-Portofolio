@@ -1,5 +1,11 @@
 @import '../colors';
 
+.container{
+  max-width: 90rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
 .header {
   width: 100%;
   height: min-content;
@@ -205,3 +211,16 @@
   }
 }
 
+@media screen and (min-width: 2049px) {
+  .container{
+    max-width: none;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.75em;
+  }
+
+  .nav {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+  }
+}

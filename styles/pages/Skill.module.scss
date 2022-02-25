@@ -33,90 +33,191 @@
   }
 }
 
-.skills {
-  margin-top: 2rem;
+.skillsContainer{
   width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
 
-  .skill5 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: .5rem;
-  }
+  .skillGroup{
+    border-radius: 1rem;
+    background-color: $darkBlue400;
+  
+    .skillBtn{
+      border: none;
+      border-radius: 1rem;
+      background-color: transparent;
+      color: white;
+      width: 100%;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
 
-  .skill4 {
-    margin-top: 2rem;
-    padding: 0 4rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: .5rem;
-  }
+      .chevron{
+        transition: all 1s ease;
+      }
 
-  .skill3 {
-    margin-top: 2rem;
-    padding: 0 8rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: .5rem;
-  }
+      .skillTitle{
+        flex: 1;
+        text-align: start;
+        margin: 0 1rem;
 
-  .skill2 {
-    margin-top: 2rem;
-    padding: 0 12rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: .5rem;
-  }
+        & h2{
+          font-size: 1.5em;
+        }
 
-  .skillItem {
-    text-align: center;
+        & p{
+          font-size: .9em;
+          color: $blue100;
+          font-weight: 600;
+        }
+      }
 
-    img {
-      height: 3.5rem;
-      width: 3.5rem;
-      object-fit: contain;
-      object-position: center;
+      & span{
+        flex: 1;
+        text-align: start;
+        margin: 0 1rem;
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-top: -0.2rem;
+      }
     }
 
-    h4 {
-      font-weight: 500;
-      font-size: 1.1em;
+    .skillItems{
+      margin-top: 0;
+      overflow: hidden;
+      max-height: 0;
+      transition: all 2s ease-out;
+
+      .skillItem{
+        padding: 0rem 1rem 1.5rem 2.5rem;
+        display: flex;
+        align-items: center;
+
+        & img{
+          height: 1.5rem;
+          width: 2rem;
+          object-fit: contain;
+          object-position: left;
+        }
+
+        & span{
+          font-weight: 600;
+          margin-left: .75rem;
+          color: $blue100;
+        }
+      }
     }
   }
 }
 
-.slideContainer {
-  margin-top: 2rem;
+.whiteBg{
+  background-color: white;
+  border-radius: .35rem;
+  object-position: center !important;
 }
 
-.skillSliding {
-  width: 100%;
-
-  &:nth-child(even) {
-    animation: sliding 25s linear infinite;
+.skillsContainer .active{
+  .chevron{
+    transform: rotateZ(180deg);
   }
 
-  &:nth-child(odd) {
-    animation: sliding 25s linear infinite reverse;
+  .skillBtn{
+    padding: 1rem 1.5rem 1.5rem;
   }
 
-  span {
-    line-height: 1;
-    white-space: nowrap;
-    font-size: 5vw;
-    font-weight: 900;
-    text-shadow: #fff 0 0 2px, #fff 0 0 2px, #fff 0 0 2px, #fff 0 0 2px, #fff 0 0 2px, #fff 0 0 2px;
-    color: $darkBlue700;
-  }
-
-  span:nth-child(even) {
-    font-style: italic;
-  }
-
-  span::before {
-    content: "--";
-    margin: 0 1rem;
+  .skillItems{
+    max-height: 100vh;
   }
 }
+
+// .skills {
+//   margin-top: 2rem;
+//   width: 100%;
+
+//   .skill5 {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+//     gap: .5rem;
+//   }
+
+//   .skill4 {
+//     margin-top: 2rem;
+//     padding: 0 4rem;
+//     display: grid;
+//     grid-template-columns: 1fr 1fr 1fr 1fr;
+//     gap: .5rem;
+//   }
+
+//   .skill3 {
+//     margin-top: 2rem;
+//     padding: 0 8rem;
+//     display: grid;
+//     grid-template-columns: 1fr 1fr 1fr;
+//     gap: .5rem;
+//   }
+
+//   .skill2 {
+//     margin-top: 2rem;
+//     padding: 0 12rem;
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     gap: .5rem;
+//   }
+
+//   .skillItem {
+//     text-align: center;
+
+//     img {
+//       height: 3.5rem;
+//       width: 3.5rem;
+//       object-fit: contain;
+//       object-position: center;
+//     }
+
+//     h4 {
+//       font-weight: 500;
+//       font-size: 1.1em;
+//     }
+//   }
+// }
+
+// .slideContainer {
+//   margin-top: 2rem;
+// }
+
+// .skillSliding {
+//   width: 100%;
+
+//   &:nth-child(even) {
+//     animation: sliding 25s linear infinite;
+//   }
+
+//   &:nth-child(odd) {
+//     animation: sliding 25s linear infinite reverse;
+//   }
+
+//   span {
+//     line-height: 1;
+//     white-space: nowrap;
+//     font-size: 5vw;
+//     font-weight: 900;
+//     text-shadow: #fff 0 0 2px, #fff 0 0 2px, #fff 0 0 2px, #fff 0 0 2px, #fff 0 0 2px, #fff 0 0 2px;
+//     color: $darkBlue700;
+//   }
+
+//   span:nth-child(even) {
+//     font-style: italic;
+//   }
+
+//   span::before {
+//     content: "--";
+//     margin: 0 1rem;
+//   }
+// }
 
 @keyframes sliding {
   0% {

@@ -15,7 +15,7 @@ export default function Header() {
 
 	return (
 		<header className={styles.header}>
-			<div className='container'>
+			<div className={styles.container}>
 				<nav className={styles.nav}>
 					<div className={styles.mainNav} >
 						<h1 className={styles.logoNav}>

@@ -38,19 +38,19 @@ export default function SkillSection() {
 	}
 
 	const skillBlured = (skill: string) => {
-		if (skill == 'frontend' && frontend) {
-			setFrondend(false)
-		} else if (skill == 'backend' && backend) {
-			setBackend(false)
-		} else if (skill == 'mobile' && mobile) {
-			setMobile(false)
-		} else if (skill == 'programming' && programming) {
-			setProgramming(false)
-		} else if (skill == 'database' && database) {
-			setDatabase(false)
-		} else if (skill == 'other' && other) {
-			setOther(false)
-		}
+		// if (skill == 'frontend' && frontend) {
+		// 	setFrondend(false)
+		// } else if (skill == 'backend' && backend) {
+		// 	setBackend(false)
+		// } else if (skill == 'mobile' && mobile) {
+		// 	setMobile(false)
+		// } else if (skill == 'programming' && programming) {
+		// 	setProgramming(false)
+		// } else if (skill == 'database' && database) {
+		// 	setDatabase(false)
+		// } else if (skill == 'other' && other) {
+		// 	setOther(false)
+		// }
 	}
 
 	useEffect(() => {
@@ -393,6 +393,16 @@ export default function SkillSection() {
 					<span>C#</span>
 				</div>
 			</div> */}
+			<div className={styles.fishContainer}>
+				<img src="/assets/fish/1.gif" alt="Fish" />
+				<img src="/assets/fish/2.gif" alt="Fish" />
+				<img src="/assets/fish/3.gif" alt="Fish" />
+				<img src="/assets/fish/4.gif" alt="Fish" />
+				<img src="/assets/fish/2.gif" alt="Fish" />
+				<img src="/assets/fish/3.gif" alt="Fish" />
+				<img src="/assets/fish/4.gif" alt="Fish" />
+				<img src="/assets/fish/1.gif" alt="Fish" />
+			</div>
 		</section>
 	)
 }

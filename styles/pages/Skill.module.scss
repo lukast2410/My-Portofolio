@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: center;
   padding: 2rem 0 4rem 0;
+  position: relative;
 }
 
 .container {
@@ -34,6 +35,8 @@
 }
 
 .skillsContainer{
+  position: relative;
+  z-index: 10;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -131,6 +134,170 @@
 
   .skillItems{
     max-height: 100vh;
+  }
+}
+
+.fishContainer{
+  & img{
+    position: absolute;
+    z-index: 5;
+  }
+
+  & img:nth-child(1){
+    bottom: 5rem;
+    height: 4rem;
+    right: -10rem;
+    animation: fishFromRight 25s linear infinite;
+    animation-delay: 1s;
+  }
+
+  & img:nth-child(2){
+    top: 10rem;
+    height: 3rem;
+    left: -10rem;
+    animation: fishFromLeft 20s linear infinite;
+    animation-delay: 3s;
+  }
+
+  & img:nth-child(3){
+    top: 3rem;
+    height: 5rem;
+    right: -10rem;
+    animation: fishFromRight 30s linear infinite;
+    animation-delay: 2s;
+  }
+
+  & img:nth-child(4){
+    top: 15rem;
+    height: 6rem;
+    right: -10rem;
+    animation: fishFromRight 22s linear infinite;
+    animation-delay: 5s;
+  }
+
+  & img:nth-child(5){
+    bottom: 40rem;
+    height: 6rem;
+    left: -10rem;
+    animation: fishFromLeft 20s linear infinite;
+  }
+
+  & img:nth-child(6){
+    bottom: 22rem;
+    height: 7rem;
+    left: -10rem;
+    animation: fishFromLeftFlip 24s linear infinite;
+    animation-delay: 4s;
+  }
+  
+  & img:nth-child(7){
+    bottom: 12rem;
+    height: 8rem;
+    left: -10rem;
+    animation: fishFromLeftFlip 24s linear infinite;
+    animation-delay: 2s;
+  }
+  
+  & img:nth-child(8){
+    top: 30rem;
+    height: 7rem;
+    right: -10rem;
+    animation: fishFromRight 25s linear infinite;
+    animation-delay: 8s;
+  }
+}
+
+@keyframes fishFromRight {
+  0%{
+    right: -10rem;
+    transform: translateY(2rem);
+  }
+  20%{
+    transform: translateY(2rem);
+  }
+  30%{
+    transform: translateY(4rem);
+  }
+  40%{
+    transform: translateY(3rem);
+  }
+  50%{
+    transform: translateY(1rem);
+  }
+  60%{
+    transform: translateY(3rem);
+  }
+  70%{
+    transform: translateY(3rem);
+  }
+  80%{
+    transform: translateY(2rem);
+  }
+  100%{
+    right: 100vw;
+  }
+}
+
+@keyframes fishFromLeft {
+  0%{
+    left: -10rem;
+    transform: translateY(1rem);
+  }
+  20%{
+    transform: translateY(1rem);
+  }
+  30%{
+    transform: translateY(3rem);
+  }
+  40%{
+    transform: translateY(5rem);
+  }
+  50%{
+    transform: translateY(2rem);
+  }
+  60%{
+    transform: translateY(3rem);
+  }
+  70%{
+    transform: translateY(3rem);
+  }
+  80%{
+    transform: translateY(1rem);
+  }
+  100%{
+    left: 100vw;
+  }
+}
+
+@keyframes fishFromLeftFlip {
+  0%{
+    left: -10rem;
+    transform: scaleX(-1) translateY(1rem);
+  }
+  20%{
+    transform: scaleX(-1) translateY(1rem);
+  }
+  30%{
+    transform: scaleX(-1) translateY(3rem);
+  }
+  40%{
+    transform: scaleX(-1) translateY(5rem);
+  }
+  50%{
+    transform: scaleX(-1) translateY(2rem);
+  }
+  60%{
+    transform: scaleX(-1) translateY(3rem);
+  }
+  70%{
+    transform: scaleX(-1) translateY(3rem);
+  }
+  80%{
+    transform: scaleX(-1) translateY(1rem);
+  }
+  100%{
+    left: 100vw;
+    transform: scaleX(-1);
   }
 }
 
@@ -269,6 +436,12 @@
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .skillsContainer{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -276,6 +449,10 @@
 }
 
 @media screen and (max-width: 640px) {
+  .skillsContainer{
+    grid-template-columns: 1fr;
+  }
+
   .container {
     .title {
       width: 100%;
@@ -318,6 +495,74 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2rem .5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  .fishContainer{
+  
+    & img:nth-child(1){
+      bottom: 8rem;
+      height: 8rem;
+      right: -10rem;
+      animation: fishFromRight 30s linear infinite;
+      animation-delay: 1s;
+    }
+  
+    & img:nth-child(2){
+      top: 16rem;
+      height: 6rem;
+      left: -10rem;
+      animation: fishFromLeft 25s linear infinite;
+      animation-delay: 3s;
+    }
+  
+    & img:nth-child(3){
+      top: 8rem;
+      height: 12rem;
+      right: -12rem;
+      animation: fishFromRight 30s linear infinite;
+      animation-delay: 2s;
+    }
+  
+    & img:nth-child(4){
+      top: 28rem;
+      height: 15rem;
+      right: -15rem;
+      animation: fishFromRight 25s linear infinite;
+      animation-delay: 5s;
+    }
+  
+    & img:nth-child(5){
+      bottom: 52rem;
+      height: 12rem;
+      left: -12rem;
+      animation: fishFromLeft 27s linear infinite;
+    }
+  
+    & img:nth-child(6){
+      bottom: 36rem;
+      height: 10rem;
+      left: -10rem;
+      animation: fishFromLeftFlip 24s linear infinite;
+      animation-delay: 4s;
+    }
+    
+    & img:nth-child(7){
+      bottom: 20rem;
+      height: 12rem;
+      left: -12rem;
+      animation: fishFromLeftFlip 26s linear infinite;
+      animation-delay: 2s;
+    }
+    
+    & img:nth-child(8){
+      top: 52rem;
+      height: 13rem;
+      right: -13rem;
+      animation: fishFromRight 28s linear infinite;
+      animation-delay: 8s;
     }
   }
 }

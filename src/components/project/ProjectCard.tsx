@@ -13,12 +13,12 @@ export default function ProjectCard({ project }) {
 				<p>{project.shortDescription}</p>
 				<div className={styles.projectLinks}>
 					<div className={styles.github}>
-						<a className={styles.projectLink} href={project.github} target='_blank'>
+						<a className={styles.projectLink} href={project.github} target='_blank' rel='noreferrer'>
 							<FaGithubAlt className={`icon5 ${styles.linkIcon}`} />
 							<span>{project.backend ? 'Frontend' : 'View on GitHub'}</span>
 						</a>
 						{project.backend && (
-							<a className={styles.projectLink} href={project.backend} target='_blank'>
+							<a className={styles.projectLink} href={project.backend} target='_blank' rel='noreferrer'>
 								<FaGithubAlt className={`icon5 ${styles.linkIcon}`} />
 								<span>Backend</span>
 							</a>
@@ -26,13 +26,13 @@ export default function ProjectCard({ project }) {
 					</div>
 					<div className={styles.demo}>
 						{project.download && (
-							<a className={styles.projectLink} href={project.download} target='_blank'>
+							<a className={styles.projectLink} href={project.download} target='_blank' rel='noreferrer'>
 								<HiOutlineDownload className={`icon5 ${styles.linkIcon}`} />
 								<span>Download</span>
 							</a>
 						)}
 						{project.live && (
-							<a className={styles.projectLink} href={project.live} target='_blank'>
+							<a className={styles.projectLink} href={project.live} target='_blank' rel='noreferrer'>
 								<RiShareBoxLine className={`icon5 ${styles.linkIcon}`} />
 								<span>Backend</span>
 							</a>

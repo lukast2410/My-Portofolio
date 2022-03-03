@@ -59,16 +59,16 @@ export default function AboutSection() {
 					and manage people to work with the best performance.
 				</p>
 				<div className={styles.links}>
-					<a href='https://github.com/lukast2410' target='_blank'>
+					<a href='https://github.com/lukast2410' target='_blank' rel='noreferrer'>
 						<FaGithubAlt className={`icon6 ${styles.linkIcon}`} />
 					</a>
-					<a href='https://www.linkedin.com/in/lukas-t-b38884137/' target='_blank'>
+					<a href='https://www.linkedin.com/in/lukas-t-b38884137/' target='_blank' rel='noreferrer'>
 						<AiOutlineLinkedin className={`icon6 ${styles.linkIcon}`} />
 					</a>
-					<a href='https://www.instagram.com/lukast2410/' target='_blank'>
+					<a href='https://www.instagram.com/lukast2410/' target='_blank' rel='noreferrer'>
 						<FaInstagram className={`icon6 ${styles.linkIcon}`} />
 					</a>
-					<a href='https://www.behance.net/lukastanto' target='_blank'>
+					<a href='https://www.behance.net/lukastanto' target='_blank' rel='noreferrer'>
 						<FaBehanceSquare className={`icon6 ${styles.linkIcon}`} />
 					</a>
 				</div>

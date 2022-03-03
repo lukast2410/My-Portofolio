@@ -34,7 +34,7 @@
   }
 }
 
-.skillsContainer{
+.skillsContainer {
   position: relative;
   z-index: 10;
   width: 100%;
@@ -43,11 +43,11 @@
   gap: 1rem;
   margin-top: 1rem;
 
-  .skillGroup{
+  .skillGroup {
     border-radius: 1rem;
     background-color: $darkBlue400;
-  
-    .skillBtn{
+
+    .skillBtn {
       border: none;
       border-radius: 1rem;
       background-color: transparent;
@@ -59,27 +59,27 @@
       align-items: center;
       cursor: pointer;
 
-      .chevron{
+      .chevron {
         transition: all 1s ease;
       }
 
-      .skillTitle{
+      .skillTitle {
         flex: 1;
         text-align: start;
         margin: 0 1rem;
 
-        & h2{
+        & h2 {
           font-size: 1.5em;
         }
 
-        & p{
+        & p {
           font-size: .9em;
           color: $blue100;
           font-weight: 600;
         }
       }
 
-      & span{
+      & span {
         flex: 1;
         text-align: start;
         margin: 0 1rem;
@@ -90,25 +90,25 @@
       }
     }
 
-    .skillItems{
+    .skillItems {
       margin-top: 0;
       overflow: hidden;
       max-height: 0;
       transition: all 2s ease-out;
 
-      .skillItem{
+      .skillItem {
         padding: 0rem 1rem 1.5rem 2.5rem;
         display: flex;
         align-items: center;
 
-        & img{
+        & img {
           height: 1.5rem;
           width: 2rem;
           object-fit: contain;
           object-position: left;
         }
 
-        & span{
+        & span {
           font-weight: 600;
           margin-left: .75rem;
           color: $blue100;
@@ -118,33 +118,33 @@
   }
 }
 
-.whiteBg{
+.whiteBg {
   background-color: white;
   border-radius: .35rem;
   object-position: center !important;
 }
 
-.skillsContainer .active{
-  .chevron{
+.skillsContainer .active {
+  .chevron {
     transform: rotateZ(180deg);
   }
 
-  .skillBtn{
+  .skillBtn {
     padding: 1rem 1.5rem 1.5rem;
   }
 
-  .skillItems{
+  .skillItems {
     max-height: 100vh;
   }
 }
 
-.fishContainer{
-  & img{
+.fishContainer {
+  & img {
     position: absolute;
     z-index: 5;
   }
 
-  & img:nth-child(1){
+  & img:nth-child(1) {
     bottom: 5rem;
     height: 4rem;
     right: -10rem;
@@ -152,7 +152,7 @@
     animation-delay: 1s;
   }
 
-  & img:nth-child(2){
+  & img:nth-child(2) {
     top: 10rem;
     height: 3rem;
     left: -10rem;
@@ -160,7 +160,7 @@
     animation-delay: 3s;
   }
 
-  & img:nth-child(3){
+  & img:nth-child(3) {
     top: 3rem;
     height: 5rem;
     right: -10rem;
@@ -168,7 +168,7 @@
     animation-delay: 2s;
   }
 
-  & img:nth-child(4){
+  & img:nth-child(4) {
     top: 15rem;
     height: 6rem;
     right: -10rem;
@@ -176,30 +176,30 @@
     animation-delay: 5s;
   }
 
-  & img:nth-child(5){
+  & img:nth-child(5) {
     bottom: 40rem;
     height: 6rem;
     left: -10rem;
     animation: fishFromLeft 20s linear infinite;
   }
 
-  & img:nth-child(6){
+  & img:nth-child(6) {
     bottom: 22rem;
     height: 7rem;
     left: -10rem;
     animation: fishFromLeftFlip 24s linear infinite;
     animation-delay: 4s;
   }
-  
-  & img:nth-child(7){
+
+  & img:nth-child(7) {
     bottom: 12rem;
     height: 8rem;
     left: -10rem;
     animation: fishFromLeftFlip 24s linear infinite;
     animation-delay: 2s;
   }
-  
-  & img:nth-child(8){
+
+  & img:nth-child(8) {
     top: 30rem;
     height: 7rem;
     right: -10rem;
@@ -209,94 +209,118 @@
 }
 
 @keyframes fishFromRight {
-  0%{
+  0% {
     right: -10rem;
     transform: translateY(2rem);
   }
-  20%{
+
+  20% {
     transform: translateY(2rem);
   }
-  30%{
+
+  30% {
     transform: translateY(4rem);
   }
-  40%{
+
+  40% {
     transform: translateY(3rem);
   }
-  50%{
+
+  50% {
     transform: translateY(1rem);
   }
-  60%{
+
+  60% {
     transform: translateY(3rem);
   }
-  70%{
+
+  70% {
     transform: translateY(3rem);
   }
-  80%{
+
+  80% {
     transform: translateY(2rem);
   }
-  100%{
+
+  100% {
     right: 100vw;
   }
 }
 
 @keyframes fishFromLeft {
-  0%{
+  0% {
     left: -10rem;
     transform: translateY(1rem);
   }
-  20%{
+
+  20% {
     transform: translateY(1rem);
   }
-  30%{
+
+  30% {
     transform: translateY(3rem);
   }
-  40%{
+
+  40% {
     transform: translateY(5rem);
   }
-  50%{
+
+  50% {
     transform: translateY(2rem);
   }
-  60%{
+
+  60% {
     transform: translateY(3rem);
   }
-  70%{
+
+  70% {
     transform: translateY(3rem);
   }
-  80%{
+
+  80% {
     transform: translateY(1rem);
   }
-  100%{
+
+  100% {
     left: 100vw;
   }
 }
 
 @keyframes fishFromLeftFlip {
-  0%{
+  0% {
     left: -10rem;
     transform: scaleX(-1) translateY(1rem);
   }
-  20%{
+
+  20% {
     transform: scaleX(-1) translateY(1rem);
   }
-  30%{
+
+  30% {
     transform: scaleX(-1) translateY(3rem);
   }
-  40%{
+
+  40% {
     transform: scaleX(-1) translateY(5rem);
   }
-  50%{
+
+  50% {
     transform: scaleX(-1) translateY(2rem);
   }
-  60%{
+
+  60% {
     transform: scaleX(-1) translateY(3rem);
   }
-  70%{
+
+  70% {
     transform: scaleX(-1) translateY(3rem);
   }
-  80%{
+
+  80% {
     transform: scaleX(-1) translateY(1rem);
   }
-  100%{
+
+  100% {
     left: 100vw;
     transform: scaleX(-1);
   }
@@ -438,7 +462,7 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .skillsContainer{
+  .skillsContainer {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -450,7 +474,7 @@
 }
 
 @media screen and (max-width: 640px) {
-  .skillsContainer{
+  .skillsContainer {
     grid-template-columns: 1fr;
   }
 
@@ -468,7 +492,7 @@
       grid-template-columns: 1fr 1fr;
       gap: 2rem .5rem;
 
-      div:nth-child(3){
+      div:nth-child(3) {
         grid-column: 1 / span 2;
       }
     }
@@ -486,7 +510,7 @@
       grid-template-columns: 1fr 1fr;
       gap: 2rem .5rem;
 
-      div:nth-child(1){
+      div:nth-child(1) {
         grid-column: 1 / span 2;
       }
     }
@@ -501,69 +525,121 @@
 }
 
 @media screen and (min-width: 2500px) {
-  .fishContainer{
-  
-    & img:nth-child(1){
+  .fishContainer {
+
+    & img:nth-child(1) {
       bottom: 8rem;
       height: 8rem;
       right: -10rem;
       animation: fishFromRight 30s linear infinite;
       animation-delay: 1s;
     }
-  
-    & img:nth-child(2){
+
+    & img:nth-child(2) {
       top: 16rem;
       height: 6rem;
       left: -10rem;
       animation: fishFromLeft 25s linear infinite;
       animation-delay: 3s;
     }
-  
-    & img:nth-child(3){
+
+    & img:nth-child(3) {
       top: 8rem;
       height: 12rem;
       right: -12rem;
       animation: fishFromRight 30s linear infinite;
       animation-delay: 2s;
     }
-  
-    & img:nth-child(4){
+
+    & img:nth-child(4) {
       top: 28rem;
       height: 15rem;
       right: -15rem;
       animation: fishFromRight 25s linear infinite;
       animation-delay: 5s;
     }
-  
-    & img:nth-child(5){
+
+    & img:nth-child(5) {
       bottom: 52rem;
       height: 12rem;
       left: -12rem;
       animation: fishFromLeft 27s linear infinite;
     }
-  
-    & img:nth-child(6){
+
+    & img:nth-child(6) {
       bottom: 36rem;
       height: 10rem;
       left: -10rem;
       animation: fishFromLeftFlip 24s linear infinite;
       animation-delay: 4s;
     }
-    
-    & img:nth-child(7){
+
+    & img:nth-child(7) {
       bottom: 20rem;
       height: 12rem;
       left: -12rem;
       animation: fishFromLeftFlip 26s linear infinite;
       animation-delay: 2s;
     }
-    
-    & img:nth-child(8){
+
+    & img:nth-child(8) {
       top: 52rem;
       height: 13rem;
       right: -13rem;
       animation: fishFromRight 28s linear infinite;
       animation-delay: 8s;
+    }
+  }
+
+  .container {
+    max-width: 1536px;
+
+    .title {
+      font-size: 8rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .skillsContainer {
+    gap: 1.5rem;
+
+    .skillGroup {
+
+      .skillBtn {
+
+        & span {
+          font-size: 2em;
+          font-weight: 500;
+        }
+      }
+
+      .skillItems .skillItem {
+        padding: 0rem 1rem 1.5rem 3.5rem;
+        
+        & img {
+          height: 2rem;
+          width: 3rem;
+        }
+
+        & span {
+          font-size: 1.45em;
+          margin-left: 1.25rem;
+        }
+      }
+    }
+  }
+
+  .skillsContainer .active {
+    .chevron {
+      transform: rotateZ(180deg);
+    }
+
+    .skillBtn {
+      padding: 1rem 1.5rem 1.5rem;
+    }
+
+    .skillItems {
+      max-height: 100vh;
     }
   }
 }

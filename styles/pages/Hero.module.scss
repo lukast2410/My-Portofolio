@@ -24,7 +24,7 @@
   align-items: center;
   justify-content: center;
 
-  .short{
+  .short {
     display: flex;
     align-items: center;
   }
@@ -355,11 +355,11 @@
       padding-bottom: 10rem;
     }
 
-    .short{
+    .short {
       align-items: flex-start;
     }
 
-    .links{
+    .links {
       margin-top: 1rem;
     }
 
@@ -384,7 +384,7 @@
     font-size: 8rem;
   }
 
-  .shortDescription{
+  .shortDescription {
 
     .fullName h1 {
       font-size: 2.75rem;
@@ -423,7 +423,7 @@
       padding-bottom: 5rem;
     }
 
-    .short{
+    .short {
       width: 100%;
       max-width: 18rem;
       flex-direction: column;
@@ -432,7 +432,7 @@
 
     .links {
       flex-direction: row;
-  
+
       a {
         margin: 0 1.25rem 0 0.25rem;
       }
@@ -479,7 +479,7 @@
 }
 
 @media screen and (min-width: 2500px) {
-  .shortDescription{
+  .shortDescription {
     .fullName h1 {
       font-size: 6em;
     }
@@ -501,5 +501,20 @@
 
   .nameTitle {
     font-size: 14.5em;
+  }
+
+  .scrollDown {
+    height: 7.5rem;
+    width: 4rem;
+    border: white 5px solid;
+
+    &::after,
+    &::before {
+      border: 7px white solid;
+      border-left: transparent;
+      border-top: transparent;
+      width: 1.25rem;
+      height: 1.25rem;
+    }
   }
 }

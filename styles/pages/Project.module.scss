@@ -1,0 +1,102 @@
+@import '../colors';
+
+.projectSection {
+  width: 100%;
+  height: min-content;
+  min-height: 100vh;
+  background-image: linear-gradient($darkBlue700, $darkBlue800);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 1024px;
+  height: 100%;
+
+  .title {
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+    color: $orange200;
+  }
+}
+
+.projectGrid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.viewMoreContainer{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.viewMore{
+  text-align: center;
+  font-size: 1.75em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: transparent;
+  position: relative;
+
+  &::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 49%;
+    left: -5%;
+    right: -10%;
+    height: .3rem;
+    border-radius: .25rem;
+    background-color: $white;
+    margin-top: -.15rem;
+    transform: scale(0);
+    transition: transform .6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 1;
+  }
+
+  .mask{
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    color: $white;
+    top: 0;
+    height: 50%;
+    transition: all .6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .mask span{
+    display: block;
+  }
+
+  .mask + .mask{
+    top: 48.5%;
+    height: 51.5%;
+  }
+
+  .mask + .mask span{
+    transform: translateY(-49%);
+  }
+
+  &:hover .mask,
+  &:active .mask{
+    color: $blue200;
+    transform: skewX(12deg) translateX(.25rem);
+  }
+
+  &:hover .mask + .mask,
+  &:active .mask + .mask{
+    transform: skewX(12deg) translateX(.25rem);
+  }
+
+  &:hover::before,
+  &:active::before{
+    transform: scale(1);
+  }
+}

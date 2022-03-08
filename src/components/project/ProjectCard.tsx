@@ -34,7 +34,7 @@ export default function ProjectCard({ project }) {
 						{project.live && (
 							<a className={styles.projectLink} href={project.live} target='_blank' rel='noreferrer'>
 								<RiShareBoxLine className={`icon5 ${styles.linkIcon}`} />
-								<span>Backend</span>
+								<span>Live Demo</span>
 							</a>
 						)}
 					</div>

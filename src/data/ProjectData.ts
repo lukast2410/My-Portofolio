@@ -26,5 +26,14 @@ export const projectData = [
     github: 'https://github.com/lukast2410/Dear-Mory.git',
     shortDescription: 'Diary, Money organizer, and Reminder Application',
     description: 'Dear Mory is an application that could be a friend for you to tell your stories about your daily life. In this application, we can take a notes, note our spending and income, save pictures, and set reminders.',
-  }
+  },
+  {
+    name: 'BurgeL King',
+    demo: '/assets/projects/burgelking-demo.gif',
+    banner: '/assets/projects/burgelking-demo.gif',
+    live: 'https://burgelking.vercel.app/',
+    github: 'https://github.com/lukast2410/BurgeL-King.git',
+    shortDescription: 'Burger Restaurant Website for Promotion and Restaurant Profile',
+    description: 'BurgeL King Website introduce a Burger Restaurant with the best deals. This website also tell us the history of this restaurant. This website made with ReactJS. The design already responsive to Tablet and Mobile.',
+  },
 ]

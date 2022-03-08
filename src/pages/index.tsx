@@ -1,6 +1,5 @@
 import { NextPage } from 'next'
 import Layout from '../components/Layout'
-import styles from '../../styles/pages/Home.module.scss'
 import Header from '../components/Header'
 import HeroSection from '../components/hero/HeroSection'
 import AboutSection from '../components/about/AboutSection'

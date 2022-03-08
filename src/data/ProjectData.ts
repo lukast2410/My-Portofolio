@@ -6,7 +6,7 @@ export const projectData = [
     live: '-',
     github: 'https://github.com/lukast2410/LegacyArT.git',
     shortDescription: 'Web Application for NFT Marketplace',
-    description: 'NFT Marketplace with auction system based on website application. This website made with Laravel 8 Framework and MySQL Database. The design already responsive to Tablet and Mobile.',
+    description: 'NFT Marketplace with auction system based on website application.',
   },
   {
     name: 'Binusmaya Practicum',
@@ -16,7 +16,7 @@ export const projectData = [
     github: 'https://github.com/lukast2410/RIG-Bimay-Practicum-NextJS.git',
     backend: 'https://github.com/lukast2410/RIG-Bimay-Practicum-NestJS.git',
     shortDescription: 'Laboratory Course Organizer for Student in Binus',
-    description: 'Laboratory Course Organizer for Student in Bina Nusantara University. With Binusmaya Practicum, student can check class or extra class schedules, view the subject\'s material, download and upload assignment, etc. This website made with NextJS and NestJS. The design already responsive to Tablet and Mobile. Support Progressive Web App.',
+    description: 'Laboratory Course Organizer for Student to view schedules, subject\'s material, download and upload assignment, etc.',
   },
   {
     name: 'Dear Mory',
@@ -25,7 +25,7 @@ export const projectData = [
     download: '-',
     github: 'https://github.com/lukast2410/Dear-Mory.git',
     shortDescription: 'Diary, Money organizer, and Reminder Application',
-    description: 'Dear Mory is an application that could be a friend for you to tell your stories about your daily life. In this application, we can take a notes, note our spending and income, save pictures, and set reminders.',
+    description: 'Dear Mory is an application that could be a friend for you to tell your stories about your daily life.',
   },
   {
     name: 'BurgeL King',
@@ -34,6 +34,6 @@ export const projectData = [
     live: 'https://burgelking.vercel.app/',
     github: 'https://github.com/lukast2410/BurgeL-King.git',
     shortDescription: 'Burger Restaurant Website for Promotion and Restaurant Profile',
-    description: 'BurgeL King Website introduce a Burger Restaurant with the best deals. This website also tell us the history of this restaurant. This website made with ReactJS. The design already responsive to Tablet and Mobile.',
+    description: 'BurgeL King Website introduce a Burger Restaurant with the best deals.',
   },
 ]

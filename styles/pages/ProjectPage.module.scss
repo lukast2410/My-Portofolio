@@ -1,72 +1,12 @@
 @import '../colors';
 
 .container{
-    // background: url('/assets/night-sea.jpg');
+    background: 50%/contain url('/assets/universe.png');
     background-color: $darkBlue800;
-    background-size: cover;
-    background-position: center;
     min-height: 100vh;
     width: 100%;
     padding: 10rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.right.projectContainer{
-    flex-direction: row-reverse;
-
-    .banner{
-        padding: 5% 5% 3.5% 9%;
-    }
-
-    .information{
-        margin-right: -7.5%;
-        margin-left: 0;
-    }
-}
-
-.projectContainer{
-    width: 100%;
-    max-width: 1280px;
-    display: flex;
-    align-items: flex-start;
-    margin: 5rem 0;
-
-    .banner{
-        border-radius: 2rem;
-        overflow: hidden;
-        padding: 5% 9% 3.5% 5%;
-        flex: 5;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        // background-color: #1c384d;
-        background-color: #0d3c5f;
-        
-        & img{
-            border-radius: 1rem;
-            width: 100%;
-            box-shadow: rgba(39, 39, 39, 0.35) 0px 3px 4px 8px;
-        }
-    }
-
-    .information{
-        flex: 3;
-        margin-top: 4.75%;
-        margin-left: -6%;
-
-        & h1{
-            font-size: 2.5em;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 2rem;
-        }
-
-        & p{
-            font-weight: 500;
-            font-size: 1.1em;
-            max-width: 90%;
-        }
-    }
 }

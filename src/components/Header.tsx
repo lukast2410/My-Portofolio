@@ -9,6 +9,7 @@ import {
 	HiOutlineViewGrid,
 } from 'react-icons/hi'
 import styles from '../../styles/components/Header.module.scss'
+import Link from 'next/link'
 
 export default function Header() {
 	const [show, setShow] = useState(false)
@@ -28,52 +29,64 @@ export default function Header() {
 					</div>
 					<ul className={`${show ? styles.showMenuGrid : ''}`}>
 						<li>
-							<a href='#'>
-								<div className={styles.iconContainer}>
-									<HiOutlineHome className={styles.navIcon} />
-								</div>
-								<p>Home</p>
-							</a>
+							<Link href='/#'>
+								<a>
+									<div className={styles.iconContainer}>
+										<HiOutlineHome className={styles.navIcon} />
+									</div>
+									<p>Home</p>
+								</a>
+							</Link>
 						</li>
 						<li>
-							<a href='#about'>
-								<div className={styles.iconContainer}>
-									<HiOutlineUser className={styles.navIcon} />
-								</div>
-								<p>About Me</p>
-							</a>
+							<Link href='/#about'>
+								<a>
+									<div className={styles.iconContainer}>
+										<HiOutlineUser className={styles.navIcon} />
+									</div>
+									<p>About Me</p>
+								</a>
+							</Link>
 						</li>
 						<li>
-							<a href='#skills'>
-								<div className={styles.iconContainer}>
-									<HiOutlineChartSquareBar className={styles.navIcon} />
-								</div>
-								<p>Skills</p>
-							</a>
+							<Link href='/#skills'>
+								<a>
+									<div className={styles.iconContainer}>
+										<HiOutlineChartSquareBar className={styles.navIcon} />
+									</div>
+									<p>Skills</p>
+								</a>
+							</Link>
 						</li>
 						<li>
-							<a href='#projects'>
-								<div className={styles.iconContainer}>
-									<HiOutlineBriefcase className={styles.navIcon} />
-								</div>
-								<p>Projects</p>
-							</a>
+							<Link href='/projects'>
+								<a>
+									<div className={styles.iconContainer}>
+										<HiOutlineBriefcase className={styles.navIcon} />
+									</div>
+									<p>Projects</p>
+								</a>
+							</Link>
 						</li>
 						<li>
-							<a href='#achievement'>
-								<div className={styles.iconContainer}>
-									<HiOutlineStar className={styles.navIcon} />
-								</div>
-								<p>Achievement</p>
-							</a>
+							<Link href='/#achievement'>
+								<a>
+									<div className={styles.iconContainer}>
+										<HiOutlineStar className={styles.navIcon} />
+									</div>
+									<p>Achievement</p>
+								</a>
+							</Link>
 						</li>
 						<li>
-							<a href='#contacts'>
-								<div className={styles.iconContainer}>
-									<HiOutlineMail className={styles.navIcon} />
-								</div>
-								<p>Contact Me</p>
-							</a>
+							<Link href='/#contacts'>
+								<a>
+									<div className={styles.iconContainer}>
+										<HiOutlineMail className={styles.navIcon} />
+									</div>
+									<p>Contact Me</p>
+								</a>
+							</Link>
 						</li>
 					</ul>
 				</nav>

@@ -1,0 +1,249 @@
+@import '../colors';
+
+.right.projectContainer{
+    flex-direction: row-reverse;
+
+    .banner{
+        padding: 5% 5% 3.5% 9%;
+    }
+
+    .information{
+        margin-right: -6%;
+        margin-left: 0;
+    }
+}
+
+.projectContainer{
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    align-items: flex-start;
+    margin: 5rem 0;
+
+    .banner{
+        border-radius: 2rem;
+        overflow: hidden;
+        padding: 5% 9% 3.5% 5%;
+        flex: 5;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        // background-color: #1c384d;
+        background-color: #0d3c5f;
+        min-width: 640px;
+        
+        & img{
+            border-radius: 1rem;
+            width: 100%;
+            box-shadow: rgba(39, 39, 39, 0.35) 0px 3px 4px 8px;
+        }
+    }
+
+    .information{
+        flex: 3;
+        margin-top: 4.75%;
+        margin-left: -6%;
+
+        & h1{
+            font-size: 2.5em;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        & p{
+            font-weight: 500;
+            font-size: 1.1em;
+            // max-width: 95%;
+        }
+
+        .linkContainer{
+            margin-top: 1.75rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .links{
+            display: inline-block;
+            font-size: 1.25em;
+            text-transform: uppercase;
+            letter-spacing: .35rem;
+            font-weight: 500;
+            position: relative;
+            padding: .4rem 0;
+            width: fit-content;
+            cursor: pointer;
+
+            &::after{
+                content: "";
+                height: 3px;
+                background: linear-gradient(90deg, $blue300, $blue100);
+                display: block;
+                position: absolute;
+                bottom: -2px;
+                width: 50%;
+                border-radius: 2px;
+                overflow: hidden;
+                transition: width .5s ease-in-out;
+            }
+        }
+
+        .links:hover::after{
+            width: 105%;
+        }
+
+        .softwareContainer{
+            margin-top: 3.5rem;
+            width: 100%;
+            display: flex;
+            // grid-template-columns: 1fr 1fr 1fr 1fr;
+
+            .software{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-right: 1.5rem;
+                max-width: 5.5rem;
+
+                & span{
+                    margin: .75rem 0;
+                    text-align: center;
+                    font-size: 1.15em;
+                    line-height: 1.2;
+                }
+            }
+        }
+    }
+
+    .space{
+        flex: .75;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .projectContainer{
+
+        .banner{
+            border-radius: 0 2rem 2rem 0;
+        }
+
+        .space{
+            flex: .5;
+        }
+    }
+
+    .right.projectContainer{
+    
+        .banner{
+            border-radius: 2rem 0 0 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .projectContainer{
+
+        .banner{
+            min-width: 500px;
+        }
+
+        .information{
+            
+            & h1{
+                font-size: 2em;
+                font-weight: 600;
+                margin-bottom: 1.25rem;
+            }
+    
+            & p{
+                font-weight: 400;
+                font-size: 1em;
+            }
+
+            .linkContainer{
+                margin-top: 1.5rem;
+            }
+    
+            .links{
+                font-size: 1.1em;
+                padding: .4rem 0 .3rem;
+    
+                &::after{
+                    height: 2px;
+                }
+            }
+    
+            .softwareContainer{
+                margin-top: 3rem;
+    
+                .software{
+    
+                    & span{
+                        font-size: 1.05em;
+                    }
+                }
+            }
+        }
+
+        .space{
+            flex: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projectContainer{
+        margin: 0 0 1rem;
+        flex-direction: column !important;
+
+        .banner{
+            border-radius: 0 !important;
+            min-width: 0 !important;
+            width: 100% !important;
+            padding: 6% 7% 5% 7% !important;
+        }
+
+        .information{
+            margin: 2rem 2rem !important;
+            
+            & h1{
+                font-size: 2em;
+                font-weight: 600;
+                margin-bottom: 1.25rem;
+            }
+    
+            & p{
+                font-weight: 400;
+                font-size: 1em;
+            }
+
+            .linkContainer{
+                margin-top: 1.5rem;
+            }
+    
+            .links{
+                font-size: 1.1em;
+                padding: .4rem 0 .3rem;
+    
+                &::after{
+                    height: 2px;
+                }
+            }
+    
+            .softwareContainer{
+                margin-top: 3rem;
+    
+                .software{
+    
+                    & span{
+                        font-size: 1.05em;
+                    }
+                }
+            }
+        }
+
+        .space{
+            flex: 0;
+        }
+    }
+}

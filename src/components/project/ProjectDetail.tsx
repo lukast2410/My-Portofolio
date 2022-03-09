@@ -26,7 +26,7 @@ export default function ProjectDetail({ project, right }) {
                 </div>
                 <div className={styles.softwareContainer}>
                     {project.softwares.map((s, i) => (
-                        <div className={styles.software}>
+                        <div key={i} className={styles.software}>
                             <s.icon className='icon9' />
                             <span>{s.name}</span>
                         </div>

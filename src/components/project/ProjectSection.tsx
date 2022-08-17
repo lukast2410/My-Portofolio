@@ -10,7 +10,7 @@ export default function ProjectSection() {
 				<h1 className={styles.title}>Latest Projects</h1>
 				<div className={styles.projectGrid}>
 					{projectData.slice(0, 4).map((p, idx) => (
-						<ProjectCard key={idx} project={p}/>
+						<ProjectCard key={idx} project={p} idx={idx}/>
 					))}
 				</div>
         <div className={styles.viewMoreContainer}>

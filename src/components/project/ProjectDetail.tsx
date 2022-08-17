@@ -2,7 +2,7 @@ import styles from '../../../styles/components/ProjectDetail.module.scss'
 
 export default function ProjectDetail({ project, right }) {
     return (
-        <div className={`${styles.projectContainer} ${right ? styles.right : ''}`} data-aos={right ? 'fade-right' : 'fade-left'} data-aos-once='true'>
+        <div className={`${styles.projectContainer} ${right ? styles.right : ''}`} data-aos={right ? 'fade-right' : 'fade-left'}>
             <div className={styles.banner}>
                 <img src={project.banner} alt="Banner" />
             </div>

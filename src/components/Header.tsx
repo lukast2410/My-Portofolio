@@ -68,7 +68,7 @@ export default function Header() {
 								</a>
 							</Link>
 						</li>
-						<li>
+						{/* <li>
 							<Link href='/#achievement'>
 								<a>
 									<div className={styles.iconContainer}>
@@ -77,7 +77,7 @@ export default function Header() {
 									<p>Achievement</p>
 								</a>
 							</Link>
-						</li>
+						</li> */}
 						<li>
 							<Link href='/#contacts'>
 								<a>

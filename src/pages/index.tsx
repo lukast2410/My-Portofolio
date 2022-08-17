@@ -8,6 +8,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
 import ProjectSection from '../components/project/ProjectSection'
+import ContactSection from '../components/contact/ContactSection'
 
 const Home: NextPage = () => {
 	useEffect(() => {
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
 			<AboutSection />
 			<SkillSection />
 			<ProjectSection />
+			<ContactSection />
 		</Layout>
 	)
 }

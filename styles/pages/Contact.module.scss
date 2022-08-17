@@ -1,0 +1,136 @@
+@import '../colors';
+
+.contactSection {
+  width: 100%;
+  height: min-content;
+  min-height: 100vh;
+  background-image: linear-gradient($darkBlue800, $darkBlue900);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 7.5%;
+}
+
+.container {
+  width: 90%;
+  max-width: 1024px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  .title {
+    width: 100%;
+    font-size: 2.5rem;
+    color: $orange200;
+    line-height: 1.25;
+  }
+
+  .titleDescription{
+    color: $blue50;
+    font-weight: 500;
+    font-size: 1em;
+  }
+}
+
+.linkContainer{
+  margin-top: 1rem;
+}
+
+.linkCard{
+  border-style: solid;
+  border-color: transparent;
+  padding: .75rem 1.1rem;
+  border-radius: .85rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 25rem;
+  cursor: pointer;
+
+  span{
+    margin-left: .5rem;
+  }
+
+  .linkIcon {
+    color: white;
+  }
+
+  &:hover{
+    background-color: $darkBlue600;
+    border-color: $blue500;
+  }
+}
+
+.contacts{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  .linkContainer{
+    padding-bottom: 2rem;
+  }
+}
+
+.copyrightContainer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+
+  .copyrightBorder{
+    border-top: 3px dashed white;
+    padding: 1rem 0;
+    margin: 0 15vw;
+  }
+
+  .vercel{
+    margin-top: .5rem;
+    height: 2.25rem;
+    width: 2.25rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .copyrightContainer{
+    padding-bottom: 5rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .contactSection {
+    display: block;
+    padding-bottom: 0;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1024px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    padding-top: 2rem;
+  
+    .title {
+      font-size: 1.75rem;
+      line-height: 1;
+    }
+  
+    .titleDescription{
+      font-weight: 400;
+      font-size: .85em;
+    }
+  }
+
+  .copyrightContainer{
+    position: relative;
+    padding-bottom: 5rem;
+    margin-top: 4rem;
+  
+    .copyrightBorder{
+      margin: 0 5vw;
+    }
+  }
+}

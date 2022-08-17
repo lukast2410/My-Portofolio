@@ -35,8 +35,6 @@ export default function AboutSection() {
 					alt='GKJ'
 					style={{ transform: `translateY(-${offsetY * 0.025}%)` }}
 				/>
-				{/* <img src="/assets/child.png" alt="Child" /> */}
-				{/* <img src="/assets/core-training.jpg" alt="Core Training" /> */}
 			</div>
 
 			<div className={styles.container}>

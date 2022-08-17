@@ -3,9 +3,9 @@ import { HiOutlineDownload } from 'react-icons/hi'
 import { RiShareBoxLine } from 'react-icons/ri'
 import styles from '../../../styles/components/ProjectCard.module.scss'
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ project, idx }) {
 	return (
-		<div className={styles.projectCard}>
+		<div className={styles.projectCard} data-aos='fade-down' data-aos-delay={`${idx * 100}`} data-aos-duration='200'>
 			<img src={project.demo} alt='Demo' />
 			<div className={styles.circleBackground}></div>
 			<div className={styles.projectOverlay}>

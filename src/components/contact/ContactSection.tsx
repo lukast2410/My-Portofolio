@@ -64,7 +64,7 @@ export default function ContactSection() {
 					</div>
 					<div className={styles.linkContainer}>
 						{contacs.map((c, cIdx) => (
-							<a href={c.href} target='_blank' className={styles.linkCard}>
+							<a key={cIdx} href={c.href} target='_blank' rel='noreferrer' className={styles.linkCard}>
 								<c.icon className={`icon6 ${styles.linkIcon}`} />
 								<span>{c.text}</span>
 							</a>
@@ -77,7 +77,7 @@ export default function ContactSection() {
 					<h3 className={styles.titleDescription}>Framework and additional libraries:</h3>
 					<div className={styles.linkContainer}>
 						{libraries.map((l, lIdx) => (
-							<a href={l.href} target='_blank' className={styles.linkCard}>
+							<a key={lIdx} href={l.href} target='_blank' rel='noreferrer' className={styles.linkCard}>
 								<l.icon className={`icon6 ${styles.linkIcon}`} />
 								<span>{l.text}</span>
 							</a>
